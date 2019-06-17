@@ -1,0 +1,90 @@
+\contentsline {chapter}{Capitolul{} \numberline {1}Introducere - Contextul proiectului}{4}
+\contentsline {chapter}{Capitolul{} \numberline {2}Obiectivele Proiectului}{7}
+\contentsline {section}{\numberline {2.1}Formularea temei}{7}
+\contentsline {section}{\numberline {2.2}Obiectivele proiectului}{9}
+\contentsline {section}{\numberline {2.3}Cerin\c {t}e}{9}
+\contentsline {subsection}{\numberline {2.3.1}Cerin\c {t}e func\c {t}ionale}{9}
+\contentsline {subsection}{\numberline {2.3.2}Cerin\c {t}e non-func\c {t}ionale}{11}
+\contentsline {chapter}{Capitolul{} \numberline {3}Studiu Bibliografic}{12}
+\contentsline {section}{\numberline {3.1}Caracteristicile arhitecturii monolitice}{12}
+\contentsline {section}{\numberline {3.2}Caracteristicile \c {s}i avantajele arhitecturii orientate pe microservicii}{14}
+\contentsline {section}{\numberline {3.3}Microservicii \^{\i }n Cloud}{16}
+\contentsline {section}{\numberline {3.4}Securitatea in sistemele informatice}{17}
+\contentsline {subsection}{\numberline {3.4.1}Amenin\c {t}\u {a}ri}{18}
+\contentsline {subsection}{\numberline {3.4.2}Criptografia}{19}
+\contentsline {subsection}{\numberline {3.4.3}Compresia}{19}
+\contentsline {subsection}{\numberline {3.4.4}Steganografia}{19}
+\contentsline {section}{\numberline {3.5}Sisteme similare}{19}
+\contentsline {subsection}{\numberline {3.5.1}Metodologia de analiz\u {a}}{20}
+\contentsline {subsection}{\numberline {3.5.2}CloudMe}{21}
+\contentsline {subsection}{\numberline {3.5.3}Dropbox}{23}
+\contentsline {subsection}{\numberline {3.5.4}CrashPlan}{25}
+\contentsline {subsection}{\numberline {3.5.5}ICloud}{26}
+\contentsline {subsection}{\numberline {3.5.6}Google Drive}{27}
+\contentsline {subsection}{\numberline {3.5.7}OneDrive}{28}
+\contentsline {subsection}{\numberline {3.5.8}pCloud}{29}
+\contentsline {subsection}{\numberline {3.5.9}sync.com}{30}
+\contentsline {subsection}{\numberline {3.5.10}Concluzii \c {s}i plasarea sistemului}{31}
+\contentsline {chapter}{Capitolul{} \numberline {4}Analiz\u {a} \c {s}i Fundamentare Teoretic\u {a}}{33}
+\contentsline {section}{\numberline {4.1}Cazuri de utilizare}{34}
+\contentsline {subsection}{\numberline {4.1.1}Actori}{35}
+\contentsline {subsection}{\numberline {4.1.2}Modele de cazuri de utilizare}{35}
+\contentsline {section}{\numberline {4.2}Arhitectura canceptual\u {a} a sistemului}{35}
+\contentsline {section}{\numberline {4.3}Tehnologii}{35}
+\contentsline {subsection}{\numberline {4.3.1}Golang}{35}
+\contentsline {subsection}{\numberline {4.3.2}gRPC}{36}
+\contentsline {subsection}{\numberline {4.3.3}VueJS}{36}
+\contentsline {subsection}{\numberline {4.3.4}MongoDB}{36}
+\contentsline {subsection}{\numberline {4.3.5}Couchbase}{36}
+\contentsline {subsection}{\numberline {4.3.6}HTML, CSS, Bootstrap}{36}
+\contentsline {subsection}{\numberline {4.3.7}JSON Web Token(JWT)}{36}
+\contentsline {subsection}{\numberline {4.3.8}Docker \c {s}i Kubernetes}{36}
+\contentsline {subsection}{\numberline {4.3.9}Google Cloud}{36}
+\contentsline {subsection}{\numberline {4.3.10}Git}{36}
+\contentsline {chapter}{Capitolul{} \numberline {5}Proiectare de Detaliu \c {s}i Implementare}{37}
+\contentsline {section}{\numberline {5.1}Arhitectura serverului}{37}
+\contentsline {subsection}{\numberline {5.1.1}Descriere general\u {a}}{37}
+\contentsline {subsection}{\numberline {5.1.2}Orchestrarea microserviciilor}{39}
+\contentsline {subsection}{\numberline {5.1.3}Microserviciul de autentificare}{39}
+\contentsline {subsubsection}{Introducere}{39}
+\contentsline {subsubsection}{Arhitectur\u {a}}{39}
+\contentsline {subsubsection}{Rezultate ob\c {t}inute}{40}
+\contentsline {subsection}{\numberline {5.1.4}Microserviciul de criptare}{40}
+\contentsline {subsubsection}{Introducere}{40}
+\contentsline {subsubsection}{Arhitectur\u {a}}{40}
+\contentsline {subsubsection}{Rezultate ob\c {t}inute}{40}
+\contentsline {subsection}{\numberline {5.1.5}Microserviciul de steganografie \c {s}i marcare}{40}
+\contentsline {subsubsection}{Introducere}{40}
+\contentsline {subsubsection}{Arhitectur\u {a}}{41}
+\contentsline {subsubsection}{Aplica\c {t}iile steganografiei}{41}
+\contentsline {subsubsection}{Rezultate algoritmi}{41}
+\contentsline {subsection}{\numberline {5.1.6}Microserviciul de compresie}{41}
+\contentsline {subsubsection}{Introducere}{41}
+\contentsline {subsubsection}{Arhitectur\u {a}}{41}
+\contentsline {subsubsection}{Rezultate algoritmi}{42}
+\contentsline {subsection}{\numberline {5.1.7}Microserviciul de fisiere}{45}
+\contentsline {subsubsection}{Introducere}{45}
+\contentsline {subsubsection}{Arhitectur\u {a}}{45}
+\contentsline {subsection}{\numberline {5.1.8}Microserviciul de utilizatori}{45}
+\contentsline {subsubsection}{Introducere}{45}
+\contentsline {subsubsection}{Arhitectur\u {a}}{45}
+\contentsline {section}{\numberline {5.2}Arhitectura aplicatiei web}{45}
+\contentsline {subsection}{\numberline {5.2.1}Descriere general\u {a}}{45}
+\contentsline {subsection}{\numberline {5.2.2}Descrierea componentelor}{45}
+\contentsline {chapter}{Capitolul{} \numberline {6}Testare \c {s}i Validare}{46}
+\contentsline {section}{\numberline {6.1}Testarea serverului}{46}
+\contentsline {subsection}{\numberline {6.1.1}Reguli de testare \^{\i }n Golang}{46}
+\contentsline {subsection}{\numberline {6.1.2}Testarea serviciilor}{47}
+\contentsline {section}{\numberline {6.2}Testarea clientului}{48}
+\contentsline {chapter}{Capitolul{} \numberline {7}Manual de Instalare \c {s}i Utilizare}{49}
+\contentsline {section}{\numberline {7.1}Cerin\c {t}e preliminare}{49}
+\contentsline {section}{\numberline {7.2}Instalare si configurare}{49}
+\contentsline {chapter}{Capitolul{} \numberline {8}Concluzii}{50}
+\contentsline {section}{\numberline {8.1}Contribu\c {t}ii \c {s}i rezultate ob\c {t}inute}{50}
+\contentsline {section}{\numberline {8.2}Dezvolt\u {a}ri ulterioare}{50}
+\contentsline {chapter}{Bibliografie}{51}
+\contentsline {chapter}{Anexa{} \numberline {A}Sec\c {t}iuni relevante din cod}{52}
+\contentsline {chapter}{Lista figurilor}{53}
+\contentsline {chapter}{Lista tabelelor}{54}
+\contentsline {chapter}{Anexa{} \numberline {B}Diagrame UML}{55}
+\contentsline {chapter}{Anexa{} \numberline {C}Glosar}{56}
