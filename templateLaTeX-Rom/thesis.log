@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.28)  17 JUN 2019 03:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018) (preloaded format=pdflatex 2019.1.28)  30 JUN 2019 13:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -819,35 +819,109 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box71
 \enitdp@description=\count306
 )
-(./thesis.aux (./guideline.aux) (./apendix.aux))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2008/02/07
+
+Style option: `fancyvrb2.7a, with DG/SPQR fixes, and firstline=lastline fix <20
+08/02/07> (tvz)
+\FV@CodeLineNo=\count307
+\FV@InFile=\read3
+\FV@TabBox=\box72
+\c@FancyVerbLine=\count308
+\FV@StepNumber=\count309
+\FV@OutFile=\write5
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count310
+\lst@gtempboxa=\box73
+\lst@token=\toks47
+\lst@length=\count311
+\lst@currlwidth=\dimen292
+\lst@column=\count312
+\lst@pos=\count313
+\lst@lostspace=\dimen293
+\lst@width=\dimen294
+\lst@newlines=\count314
+\lst@lineno=\count315
+\lst@maxwidth=\dimen295
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count316
+\lst@skipnumbers=\count317
+\lst@framebox=\box74
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
+Package: tcolorbox 2018/03/22 version 4.13 text color boxes
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/tools/verbatim.sty
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks48
+\verbatim@line=\toks49
+\verbatim@in@stream=\read4
+)
+(/usr/local/texlive/2018/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(/usr/local/texlive/2018/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+(/usr/local/texlive/2018/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count318
+)
+\tcb@titlebox=\box75
+\tcb@upperbox=\box76
+\tcb@lowerbox=\box77
+\tcb@phantombox=\box78
+\c@tcbbreakpart=\count319
+\c@tcblayer=\count320
+\tcolorbox@number=\count321
+\tcb@temp=\box79
+\tcb@temp=\box80
+\tcb@temp=\box81
+\tcb@temp=\box82
+\tcb@out=\write6
+\tcb@record@out=\write7
+)
+(./thesis.aux (./guideline.aux)
+
+LaTeX Warning: Label `client_arch' multiply defined.
+
+(./apendix.aux))
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
-LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
 
 (/usr/local/texlive/2018/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count307
-\scratchdimen=\dimen292
-\scratchbox=\box72
-\nofMPsegments=\count308
-\nofMParguments=\count309
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count310
-\MPscratchDim=\dimen293
-\MPnumerator=\count311
-\makeMPintoPDFobject=\count312
-\everyMPtoPDFconversion=\toks48
+\scratchcounter=\count322
+\scratchdimen=\dimen296
+\scratchbox=\box83
+\nofMPsegments=\count323
+\nofMParguments=\count324
+\everyMPshowfont=\toks50
+\MPscratchCnt=\count325
+\MPscratchDim=\dimen297
+\MPnumerator=\count326
+\makeMPintoPDFobject=\count327
+\everyMPtoPDFconversion=\toks51
 ) (/usr/local/texlive/2018/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -901,400 +975,491 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+lasy on input line 65.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 77.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 65.
+LaTeX Font Info:    Try loading font information for U+msa on input line 77.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 65.
+LaTeX Font Info:    Try loading font information for U+msb on input line 77.
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package xypdf Info: Line width: 0.47998pt on input line 65.
+Package xypdf Info: Line width: 0.47998pt on input line 77.
+\c@lstlisting=\count328
 <img/utcn.jpg, id=4, 497.6994pt x 95.1555pt>
 File: img/utcn.jpg Graphic file (type jpg)
 <use img/utcn.jpg>
-Package pdftex.def Info: img/utcn.jpg  used on input line 83.
+Package pdftex.def Info: img/utcn.jpg  used on input line 95.
 (pdftex.def)             Requested size: 426.79134pt x 81.5998pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
  [1
 
 {/usr/local/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./img/u
-tcn.jpg>] [2]
+tcn.jpg>]
+[2]
 File: img/utcn.jpg Graphic file (type jpg)
 <use img/utcn.jpg>
-Package pdftex.def Info: img/utcn.jpg  used on input line 109.
+Package pdftex.def Info: img/utcn.jpg  used on input line 122.
 (pdftex.def)             Requested size: 426.79134pt x 81.5998pt.
 
-Overfull \hbox (25.93462pt too wide) in paragraph at lines 116--121
+Overfull \hbox (25.93462pt too wide) in paragraph at lines 129--134
 [][] 
  []
 
 
-Overfull \hbox (6.04106pt too wide) in paragraph at lines 136--137
+Overfull \hbox (6.04106pt too wide) in paragraph at lines 149--150
 []\T1/aer/bx/n/12 Conµinutul lu-cr rii: \T1/aer/m/n/12 Pag-ina de prezentare, C
 uprins, In-tro-duc-ere, Obiec-tivele Proiec-
  []
 
 [3]
-Overfull \hbox (7.46257pt too wide) in paragraph at lines 147--149
+Overfull \hbox (7.46257pt too wide) in paragraph at lines 160--162
 []  \T1/aer/m/n/12 Co-or-do-na-tor ³ti-inµific: [] 
  []
 
 [4] [5]
 File: img/utcn.jpg Graphic file (type jpg)
 <use img/utcn.jpg>
-Package pdftex.def Info: img/utcn.jpg  used on input line 165.
+Package pdftex.def Info: img/utcn.jpg  used on input line 178.
 (pdftex.def)             Requested size: 426.79134pt x 81.5998pt.
  [6]
 \openout2 = `guideline.aux'.
 
- (./guideline.tex) (./thesis.toc [1
+ (./guideline.tex) (./thesis.toc [7
 
 
 
-] [2])
-\tf@toc=\write5
-\openout5 = `thesis.toc'.
+] [8])
+\tf@toc=\write8
+\openout8 = `thesis.toc'.
 
- [3]
+ [9]
 Capitolul 1.
 <img/data_grow.png, id=38, 736.7525pt x 240.9pt>
 File: img/data_grow.png Graphic file (type png)
 <use img/data_grow.png>
-Package pdftex.def Info: img/data_grow.png  used on input line 239.
+Package pdftex.def Info: img/data_grow.png  used on input line 254.
 (pdftex.def)             Requested size: 405.21513pt x 132.49539pt.
-[4
+[1
 
  <./img/data_grow.png>]
 <img/cia_triad.png, id=47, 566.115pt x 329.73187pt>
 File: img/cia_triad.png Graphic file (type png)
 <use img/cia_triad.png>
-Package pdftex.def Info: img/cia_triad.png  used on input line 257.
+Package pdftex.def Info: img/cia_triad.png  used on input line 272.
 (pdftex.def)             Requested size: 215.12593pt x 125.29941pt.
- [5 <./img/cia_triad.png>]
-
-LaTeX Warning: Citation `data_compression_ibm' on page 6 undefined on input lin
-e 266.
-
-
-LaTeX Warning: Citation `compression_adv' on page 6 undefined on input line 266
-.
-
-[6]
+ [2 <./img/cia_triad.png>] [3]
 Capitolul 2.
 <img/client-server.jpeg, id=55, 702.625pt x 355.3275pt>
 File: img/client-server.jpeg Graphic file (type jpg)
 <use img/client-server.jpeg>
-Package pdftex.def Info: img/client-server.jpeg  used on input line 290.
-(pdftex.def)             Requested size: 210.78912pt x 106.59906pt.
-
-LaTeX Warning: Citation `solid' on page 7 undefined on input line 296.
-
-[7
+Package pdftex.def Info: img/client-server.jpeg  used on input line 306.
+(pdftex.def)             Requested size: 245.92242pt x 124.36647pt.
+[4
 
  <./img/client-server.jpeg>]
-<img/stegano_example.png, id=60, 497.86pt x 184.69pt>
+<img/stegano_example.png, id=60, 245.91875pt x 245.91875pt>
 File: img/stegano_example.png Graphic file (type png)
 <use img/stegano_example.png>
-Package pdftex.def Info: img/stegano_example.png  used on input line 310.
-(pdftex.def)             Requested size: 199.14047pt x 73.87468pt.
-LaTeX Font Info:    Try loading font information for OMS+aer on input line 321.
+Package pdftex.def Info: img/stegano_example.png  used on input line 325.
+(pdftex.def)             Requested size: 98.36575pt x 98.36575pt.
+ [5 <./img/stegano_example.png>]
+LaTeX Font Info:    Try loading font information for OMS+aer on input line 336.
 
 
 (/usr/local/texlive/2018/texmf-dist/tex/latex/ae/omsaer.fd
 File: omsaer.fd 1999/12/27
 )
 LaTeX Font Info:    Font shape `OMS/aer/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 321.
- [8 <./img/stegano_example.png>] [9] [10] [11]
-Capitolul 3.
-<img/monolith_arhichitecture.jpeg, id=76, 1405.25pt x 540.0175pt>
-File: img/monolith_arhichitecture.jpeg Graphic file (type jpg)
-<use img/monolith_arhichitecture.jpeg>
-Package pdftex.def Info: img/monolith_arhichitecture.jpeg  used on input line 4
-23.
-(pdftex.def)             Requested size: 491.84488pt x 189.00896pt.
-[12
-
-] [13 <./img/monolith_arhichitecture.jpeg>]
-Overfull \hbox (4.81021pt too wide) in paragraph at lines 449--455
-[]\T1/aer/m/n/12 Microserviciile sunt ni³te en-tit µi mici, in-de-pen-dente, au
--tonome, cre-ate s  funcµioneze
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 336.
+<img/user_roles.png, id=66, 442.65375pt x 422.57875pt>
+File: img/user_roles.png Graphic file (type png)
+<use img/user_roles.png>
+Package pdftex.def Info: img/user_roles.png  used on input line 356.
+(pdftex.def)             Requested size: 154.93112pt x 147.90477pt.
+ [6]
+Overfull \hbox (14.92378pt too wide) in paragraph at lines 362--363
+[]\T1/aer/m/n/12 Pornind de la obiec-tivele proiec-tu-lui, pot fi de-ter-mi-nat
+e ur-m -toarele cer-inµe funcµionale: 
  []
 
-<img/Microservice_Architecture.png, id=84, 541.02126pt x 371.3875pt>
+[7 <./img/user_roles.png>] [8] [9]
+Capitolul 3.
+<img/monolith_arhichitecture.png, id=81, 763.85374pt x 307.1475pt>
+File: img/monolith_arhichitecture.png Graphic file (type png)
+<use img/monolith_arhichitecture.png>
+Package pdftex.def Info: img/monolith_arhichitecture.png  used on input line 45
+0.
+(pdftex.def)             Requested size: 381.92593pt x 153.57336pt.
+[10
+
+] [11 <./img/monolith_arhichitecture.png>]
+Overfull \hbox (0.86617pt too wide) in paragraph at lines 475--475
+[]\T1/aer/bx/n/17.28 Caracteristicile arhi-tec-turii ori-en-tate pe mi-croser-
+ []
+
+
+Overfull \hbox (17.18204pt too wide) in paragraph at lines 476--482
+[]\T1/aer/m/n/12 Microserviciile[[]] sunt ni³te en-tit µi mici, in-de-pen-dente
+, au-tonome, cre-ate s  funcµioneze
+ []
+
+<img/Microservice_Architecture.png, id=90, 710.655pt x 407.5225pt>
 File: img/Microservice_Architecture.png Graphic file (type png)
 <use img/Microservice_Architecture.png>
 Package pdftex.def Info: img/Microservice_Architecture.png  used on input line 
-470.
-(pdftex.def)             Requested size: 297.5626pt x 204.26375pt.
-[14]
-Overfull \hbox (72.5525pt too wide) has occurred while \output is active
-\T1/aer/m/sl/12 3.2.  CARACTERISTICILE “I AVANTAJELE ARHITECTURII ORIENTATE PE 
-MICROSERVICII \T1/aer/m/n/12 15
- []
-
-[15 <./img/Microservice_Architecture.png>]
-<img/microservices-vs-monolithic.png, id=92, 1204.5pt x 639.38875pt>
+497.
+(pdftex.def)             Requested size: 390.86145pt x 224.13806pt.
+[12] [13 <./img/Microservice_Architecture.png>]
+<img/microservices-vs-monolithic.png, id=98, 740.7675pt x 342.27875pt>
 File: img/microservices-vs-monolithic.png Graphic file (type png)
 <use img/microservices-vs-monolithic.png>
 Package pdftex.def Info: img/microservices-vs-monolithic.png  used on input lin
-e 503.
-(pdftex.def)             Requested size: 421.58131pt x 223.78941pt.
- [16 <./img/microservices-vs-monolithic.png>]
-Overfull \hbox (11.20778pt too wide) in paragraph at lines 519--521
+e 530.
+(pdftex.def)             Requested size: 370.38284pt x 171.13895pt.
+ [14 <./img/microservices-vs-monolithic.png>]
+Overfull \hbox (11.20778pt too wide) in paragraph at lines 546--548
 []\T1/aer/m/n/12 Programabilitatea cloud-ului per-mite au-tom-a-ti-zarea pro-ce
 -selor de dez-voltare ³i livrare.
  []
 
-[17] [18] [19] [20]
-<img/Web-interface_CloudME.png, id=111, 1027.84pt x 440.64626pt>
+[15] [16]
+Overfull \hbox (2.92322pt too wide) in paragraph at lines 587--588
+[]\T1/aer/m/n/12 Pentru criptarea ³i de-criptarea fi³ierelor, a fost se-lec-tat
+ al-go-rit-mul \T1/aer/m/it/12 twofish\T1/aer/m/n/12 [[]]. Acesta
+ []
+
+<img/twofish_round.png, id=110, 639.38875pt x 729.72626pt>
+File: img/twofish_round.png Graphic file (type png)
+<use img/twofish_round.png>
+Package pdftex.def Info: img/twofish_round.png  used on input line 593.
+(pdftex.def)             Requested size: 223.78941pt x 255.40802pt.
+
+Underfull \vbox (badness 7925) has occurred while \output is active []
+
+ [17]
+Overfull \hbox (0.20015pt too wide) in paragraph at lines 610--611
+[]\T1/aer/m/n/12 În proce-sarea de date, compresia[[]] este un pro-ces care pre
+-supune en-co-darea datelor
+ []
+
+[18 <./img/twofish_round.png>]
+File: img/stegano_example.png Graphic file (type png)
+<use img/stegano_example.png>
+Package pdftex.def Info: img/stegano_example.png  used on input line 632.
+(pdftex.def)             Requested size: 147.55237pt x 147.55237pt.
+ [19] [20] [21]
+<img/Web-interface_CloudME.png, id=128, 1027.84pt x 440.64626pt>
 File: img/Web-interface_CloudME.png Graphic file (type png)
 <use img/Web-interface_CloudME.png>
-Package pdftex.def Info: img/Web-interface_CloudME.png  used on input line 659.
+Package pdftex.def Info: img/Web-interface_CloudME.png  used on input line 732.
 
 (pdftex.def)             Requested size: 359.74939pt x 154.22849pt.
- [21]
-<img/Share-options_CloudME.png, id=116, 553.06625pt x 310.15875pt>
+ [22 <./img/Web-interface_CloudME.png>]
+<img/Share-options_CloudME.png, id=134, 553.06625pt x 310.15875pt>
 File: img/Share-options_CloudME.png Graphic file (type png)
 <use img/Share-options_CloudME.png>
-Package pdftex.def Info: img/Share-options_CloudME.png  used on input line 672.
+Package pdftex.def Info: img/Share-options_CloudME.png  used on input line 745.
 
 (pdftex.def)             Requested size: 165.92114pt x 93.04834pt.
- [22 <./img/Web-interface_CloudME.png> <./img/Share-options_CloudME.png (PNG co
-py)>]
-<img/dropbox-web-app.png, id=120, 602.25pt x 300.12125pt>
+ [23 <./img/Share-options_CloudME.png (PNG copy)>]
+<img/dropbox-web-app.png, id=138, 602.25pt x 300.12125pt>
 File: img/dropbox-web-app.png Graphic file (type png)
 <use img/dropbox-web-app.png>
-Package pdftex.def Info: img/dropbox-web-app.png  used on input line 731.
+Package pdftex.def Info: img/dropbox-web-app.png  used on input line 804.
 (pdftex.def)             Requested size: 361.35278pt x 180.07413pt.
+ [24 <./img/dropbox-web-app.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \vbox (badness 2293) has occurred while \output is active []
-
- [23]
-[24 <./img/dropbox-web-app.png>]
-Overfull \hbox (5.02884pt too wide) in paragraph at lines 791--792
+ [25]
+Overfull \hbox (5.02884pt too wide) in paragraph at lines 864--865
 []\T1/aer/bx/n/12 CrashPlan \T1/aer/m/n/12 a fost car-ac-ter-i-zat ca unul din-
 tre cele mai bune sis-teme pen-tru backup[[]]
  []
 
-[25] [26] [27]
-
-LaTeX Warning: Citation `top_secure' on page 28 undefined on input line 900.
-
-[28]
-
-LaTeX Warning: Citation `top_secure' on page 29 undefined on input line 946.
-
-
-Overfull \hbox (20.51665pt too wide) in paragraph at lines 953--964
+[26] [27] [28] [29]
+Overfull \hbox (20.51665pt too wide) in paragraph at lines 1026--1037
  [][] 
  []
 
-
-Underfull \vbox (badness 5592) has occurred while \output is active []
-
- [29]
-[30] [31] [32]
+[30] [31] [32] [33]
 Capitolul 4.
-<img/use_case_diagram.png, id=154, 1117.17375pt x 858.20625pt>
+<img/diagrama_system.png, id=171, 605.26125pt x 673.51625pt>
+File: img/diagrama_system.png Graphic file (type png)
+<use img/diagrama_system.png>
+Package pdftex.def Info: img/diagrama_system.png  used on input line 1166.
+(pdftex.def)             Requested size: 272.36504pt x 303.07951pt.
+[34
+
+ <./img/diagrama_system.png>]
+<img/client_arch.png, id=177, 484.81125pt x 364.36125pt>
+File: img/client_arch.png Graphic file (type png)
+<use img/client_arch.png>
+Package pdftex.def Info: img/client_arch.png  used on input line 1179.
+(pdftex.def)             Requested size: 281.19072pt x 211.32967pt.
+<img/use_case_diagram.png, id=178, 896.34875pt x 858.20625pt>
 File: img/use_case_diagram.png Graphic file (type png)
 <use img/use_case_diagram.png>
-Package pdftex.def Info: img/use_case_diagram.png  used on input line 1094.
-(pdftex.def)             Requested size: 446.86159pt x 343.27641pt.
-
+Package pdftex.def Info: img/use_case_diagram.png  used on input line 1196.
+(pdftex.def)             Requested size: 492.99335pt x 472.01491pt.
+ [35 <./img/client_arch.png>]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [33
-
-]
-<img/golang.png, id=158, 652.4375pt x 652.4375pt>
+ [36 <./img/use_case_diagram.png>]
+<img/golang.png, id=187, 652.4375pt x 652.4375pt>
 File: img/golang.png Graphic file (type png)
 <use img/golang.png>
-Package pdftex.def Info: img/golang.png  used on input line 1110.
+Package pdftex.def Info: img/golang.png  used on input line 1212.
 (pdftex.def)             Requested size: 97.86139pt x 97.86139pt.
+ [37 <./img/golang.png>]
+<img/gRPC_example.png, id=192, 442.65375pt x 286.06876pt>
+File: img/gRPC_example.png Graphic file (type png)
+<use img/gRPC_example.png>
+Package pdftex.def Info: img/gRPC_example.png  used on input line 1240.
+(pdftex.def)             Requested size: 221.32632pt x 143.03403pt.
+ [38 <./img/gRPC_example.png>]
+[39] [40]
+Overfull \hbox (10.40022pt too wide) in paragraph at lines 1290--1291
+[]\T1/aer/m/n/12 HTML\T1/aer/m/it/12 (HyperText Markup Lan-guage)[] \T1/aer/m/n
+/12 este blocul de baz  pen-tru con-stru-irea paginilor
+ []
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34 <./img/use_case_diagram.png>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Overfull \hbox (10.19643pt too wide) in paragraph at lines 1292--1293
+[]\T1/aer/m/n/12 CSS\T1/aer/m/it/12 (Cascading Style Sheets)[] \T1/aer/m/n/12 e
+ste lim-ba-jul uti-lizat în web pen-tru a de-scrie prezentarea
+ []
 
- [35 <./img/golang.png>] [36]
+[41] [42] [43] [44]
 Capitolul 5.
+File: img/diagrama_system.png Graphic file (type png)
+<use img/diagrama_system.png>
+Package pdftex.def Info: img/diagrama_system.png  used on input line 1357.
+(pdftex.def)             Requested size: 363.15953pt x 404.11287pt.
+[45
 
-LaTeX Warning: Reference `s_logging' on page 37 undefined on input line 1142.
-
-<img/diagrama_sistem.png, id=170, 1155.31625pt x 1075.01625pt>
-File: img/diagrama_sistem.png Graphic file (type png)
-<use img/diagrama_sistem.png>
-Package pdftex.def Info: img/diagrama_sistem.png  used on input line 1151.
-(pdftex.def)             Requested size: 496.7763pt x 462.24799pt.
-[37
-
-] [38 <./img/diagrama_sistem.png>]
-<img/auth_arch.png, id=179, 688.5725pt x 295.1025pt>
+]
+<img/diagrama_cloud.png, id=221, 1147.28625pt x 733.74126pt>
+File: img/diagrama_cloud.png Graphic file (type png)
+<use img/diagrama_cloud.png>
+Package pdftex.def Info: img/diagrama_cloud.png  used on input line 1371.
+(pdftex.def)             Requested size: 458.90637pt x 293.4913pt.
+ [46]
+<img/auth_arch.png, id=226, 522.95375pt x 372.39125pt>
 File: img/auth_arch.png Graphic file (type png)
 <use img/auth_arch.png>
-Package pdftex.def Info: img/auth_arch.png  used on input line 1174.
-(pdftex.def)             Requested size: 275.4241pt x 118.0389pt.
-<img/crypto_arch.png, id=180, 688.5725pt x 295.1025pt>
+Package pdftex.def Info: img/auth_arch.png  used on input line 1385.
+(pdftex.def)             Requested size: 261.47623pt x 186.19516pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [47 <./img/diagrama_cloud.png>]
+<img/auth_classes.png, id=231, 1022.82124pt x 570.13pt>
+File: img/auth_classes.png Graphic file (type png)
+<use img/auth_classes.png>
+Package pdftex.def Info: img/auth_classes.png  used on input line 1403.
+(pdftex.def)             Requested size: 511.40936pt x 285.0643pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48 <./img/auth_arch.png>]
+<img/crypto_arch.png, id=236, 553.06625pt x 269.005pt>
 File: img/crypto_arch.png Graphic file (type png)
 <use img/crypto_arch.png>
-Package pdftex.def Info: img/crypto_arch.png  used on input line 1191.
-(pdftex.def)             Requested size: 275.4241pt x 118.0389pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39 <./img/auth_arch.png>]
-<img/watermarking_arch.png, id=185, 688.5725pt x 586.19pt>
+Package pdftex.def Info: img/crypto_arch.png  used on input line 1418.
+(pdftex.def)             Requested size: 304.18738pt x 147.9532pt.
+<img/watermarking_arch.png, id=237, 573.14125pt x 503.8825pt>
 File: img/watermarking_arch.png Graphic file (type png)
 <use img/watermarking_arch.png>
-Package pdftex.def Info: img/watermarking_arch.png  used on input line 1210.
-(pdftex.def)             Requested size: 275.4241pt x 234.47185pt.
+Package pdftex.def Info: img/watermarking_arch.png  used on input line 1433.
+(pdftex.def)             Requested size: 315.22865pt x 277.13623pt.
+ [49 <./img/auth_classes.png> <./img/crypto_arch.png>]
+<img/compression_arch.png, id=243, 553.06625pt x 269.005pt>
+File: img/compression_arch.png Graphic file (type png)
+<use img/compression_arch.png>
+Package pdftex.def Info: img/compression_arch.png  used on input line 1446.
+(pdftex.def)             Requested size: 304.18738pt x 147.9532pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [40 <./img/crypto_arch.png>]
-<img/compression_arch.png, id=190, 688.5725pt x 295.1025pt>
-File: img/compression_arch.png Graphic file (type png)
-<use img/compression_arch.png>
-Package pdftex.def Info: img/compression_arch.png  used on input line 1228.
-(pdftex.def)             Requested size: 275.4241pt x 118.0389pt.
- [41 <./img/watermarking_arch.png> <./img/compression_arch.png>]
-Overfull \hbox (26.1059pt too wide) in alignment at lines 1246--1272
+ [50 <./img/watermarking_arch.png>]
+Overfull \hbox (26.1059pt too wide) in alignment at lines 1462--1488
  [] [] [] [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1272
+Underfull \vbox (badness 10000) detected at line 1488
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1331
+Overfull \vbox (7.67047pt too high) has occurred while \output is active []
+
+
+[51 <./img/compression_arch.png>]
+Underfull \vbox (badness 10000) detected at line 1545
  []
 
-[42]
-Overfull \hbox (1.60266pt too wide) in alignment at lines 1337--1387
+
+Overfull \hbox (1.60266pt too wide) in alignment at lines 1551--1601
  [] [] [] [] [] 
  []
 
 
-Underfull \vbox (badness 10000) detected at line 1387
+Underfull \vbox (badness 10000) detected at line 1601
  []
 
-[43]
-<img/file_arch.png, id=203, 688.5725pt x 295.1025pt>
+[52]
+<img/file_arch.png, id=256, 553.06625pt x 372.39125pt>
 File: img/file_arch.png Graphic file (type png)
 <use img/file_arch.png>
-Package pdftex.def Info: img/file_arch.png  used on input line 1400.
-(pdftex.def)             Requested size: 275.4241pt x 118.0389pt.
+Package pdftex.def Info: img/file_arch.png  used on input line 1612.
+(pdftex.def)             Requested size: 304.18738pt x 204.81581pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [44]
-<img/user_arch.png, id=208, 688.5725pt x 295.1025pt>
+ [53]
+<img/user_arch.png, id=260, 553.06625pt x 372.39125pt>
 File: img/user_arch.png Graphic file (type png)
 <use img/user_arch.png>
-Package pdftex.def Info: img/user_arch.png  used on input line 1415.
-(pdftex.def)             Requested size: 275.4241pt x 118.0389pt.
+Package pdftex.def Info: img/user_arch.png  used on input line 1625.
+(pdftex.def)             Requested size: 304.18738pt x 204.81581pt.
+File: img/client_arch.png Graphic file (type png)
+<use img/client_arch.png>
+Package pdftex.def Info: img/client_arch.png  used on input line 1640.
+(pdftex.def)             Requested size: 281.19072pt x 211.32967pt.
 
-[45 <./img/file_arch.png> <./img/user_arch.png>]
+[54 <./img/file_arch.png> <./img/user_arch.png>] [55]
 Capitolul 6.
-[46
+[56
 
 ]
-<img/tabel_test.png, id=217, 721.69624pt x 687.56876pt>
-File: img/tabel_test.png Graphic file (type png)
-<use img/tabel_test.png>
-Package pdftex.def Info: img/tabel_test.png  used on input line 1450.
-(pdftex.def)             Requested size: 202.07356pt x 192.51793pt.
- [47 <./img/tabel_test.png>] [48]
+LaTeX Font Info:    Try loading font information for T1+aett on input line 1671
+.
+ (/usr/local/texlive/2018/texmf-dist/tex/latex/ae/t1aett.fd
+File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
+) [57] [58]
 Capitolul 7.
-[49
+[59
 
 ]
+Overfull \hbox (43.48453pt too wide) in paragraph at lines 1789--1790
+\T1/aer/m/n/12 adresa ur-m -toare \T1/aer/m/it/12 https://docs.couchbase.com/se
+rver/4.1/getting-started/installing.html 
+ []
+
+[60] [61]
+<img/sitemap.png, id=289, 971.63pt x 562.1pt>
+File: img/sitemap.png Graphic file (type png)
+<use img/sitemap.png>
+Package pdftex.def Info: img/sitemap.png  used on input line 1896.
+(pdftex.def)             Requested size: 408.08182pt x 236.08038pt.
+ [62 <./img/sitemap.png>]
+
+LaTeX Warning: Reference `register_button' on page 63 undefined on input line 1
+904.
+
+<img/register_button.png, id=294, 621.32124pt x 65.24374pt>
+File: img/register_button.png Graphic file (type png)
+<use img/register_button.png>
+Package pdftex.def Info: img/register_button.png  used on input line 1909.
+(pdftex.def)             Requested size: 248.5241pt x 26.09703pt.
+<img/bit_register.png, id=295, 748.7975pt x 788.44562pt>
+File: img/bit_register.png Graphic file (type png)
+<use img/bit_register.png>
+Package pdftex.def Info: img/bit_register.png  used on input line 1919.
+(pdftex.def)             Requested size: 262.08305pt x 275.9601pt.
+[63 <./img/register_button.png> <./img/bit_register.png>]
+<img/bit_drive.png, id=301, 553.06625pt x 560.0925pt>
+File: img/bit_drive.png Graphic file (type png)
+<use img/bit_drive.png>
+Package pdftex.def Info: img/bit_drive.png  used on input line 1933.
+(pdftex.def)             Requested size: 276.53244pt x 280.04556pt.
+ [64 <./img/bit_drive.png>]
 Capitolul 8.
 
-LaTeX Warning: Citation `comp_crypto' on page 50 undefined on input line 1492.
+Underfull \vbox (badness 4595) has occurred while \output is active []
 
-(./thesis.bbl [50
+ [65
 
 ]
-Underfull \hbox (badness 3701) in paragraph at lines 64--67
+(./thesis.bbl [66]
+Underfull \hbox (badness 3701) in paragraph at lines 99--102
 []\T1/aer/m/n/12 ``Cloudwards - best cloud stor-age.' [On-line]. Avail-able:
  []
 
+[67
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--73
+]
+Underfull \hbox (badness 10000) in paragraph at lines 105--108
 []\T1/aer/m/n/12 ``Crashplan re-view.' [On-line]. Avail-able:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 76--79
+Underfull \hbox (badness 10000) in paragraph at lines 111--114
 []\T1/aer/m/n/12 ``Icloud drive re-view.' [On-line]. Avail-able:
  []
 
-) [51
-
-]
+) [68]
 \openout2 = `apendix.aux'.
 
  (./apendix.tex
 Anexa A.
-LaTeX Font Info:    Try loading font information for T1+aett on input line 4.
-(/usr/local/texlive/2018/texmf-dist/tex/latex/ae/t1aett.fd
-File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
-) [52
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [69
 
 
-] (./thesis.lof)
-\tf@lof=\write6
-\openout6 = `thesis.lof'.
-
-[53
+]
+Overfull \vbox (92.15163pt too high) has occurred while \output is active []
 
 
-] (./thesis.lot)
-\tf@lot=\write7
-\openout7 = `thesis.lot'.
+[70] (./thesis.lof [71
 
- [54
+
+])
+\tf@lof=\write9
+\openout9 = `thesis.lof'.
+
+ [72] (./thesis.lot)
+\tf@lot=\write10
+\openout10 = `thesis.lot'.
+
+ [73
 
 
 ]
 Anexa B.
-[55
+[74
 
 ]
 Anexa C.
-) [56
+) [75
 
 ] (./thesis.aux (./guideline.aux) (./apendix.aux))
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 24034 strings out of 492649
- 462935 string characters out of 6129622
- 526427 words of memory out of 5000000
- 27444 multiletter control sequences out of 15000+600000
- 575389 words of font info for 119 fonts, out of 8000000 for 9000
+ 27790 strings out of 492649
+ 535678 string characters out of 6129622
+ 600854 words of memory out of 5000000
+ 31152 multiletter control sequences out of 15000+600000
+ 578429 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,16n,59p,10378b,499s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 55i,16n,73p,10378b,646s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
+></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pf
+b></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 ></usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
 /usr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></u
 sr/local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/
@@ -1302,12 +1467,13 @@ local/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/loc
 al/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/loca
 l/texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local
 /texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/
-texlive/2018/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb></usr/local/texl
-ive/2018/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
-Output written on thesis.pdf (62 pages, 1357662 bytes).
+texlive/2018/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/local/te
+xlive/2018/texmf-dist/fonts/type1/public/eurosym/feymr10.pfb></usr/local/texliv
+e/2018/texmf-dist/fonts/type1/urw/zapfding/uzdr.pfb>
+Output written on thesis.pdf (84 pages, 1537180 bytes).
 PDF statistics:
- 286 PDF objects out of 1000 (max. 8388607)
- 173 compressed objects within 2 object streams
+ 388 PDF objects out of 1000 (max. 8388607)
+ 230 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 118 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 163 words of extra memory for PDF output out of 10000 (max. 10000000)
 

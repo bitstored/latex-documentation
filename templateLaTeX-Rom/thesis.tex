@@ -28,7 +28,6 @@
 \usepackage{algorithm}
 %\usepackage{algorithmic}
 \usepackage{color}
-\usepackage{color}
 \usepackage{makecell}
 \usepackage{eurosym}
 \usepackage{pifont}% http://ctan.org/pkg/pifont
@@ -36,6 +35,10 @@
 \usepackage{xfp}
 \usepackage{multirow}
 \usepackage{enumitem}
+\usepackage{fancyvrb}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{tcolorbox}
 
 % \mastersthesis
 \diplomathesis
@@ -61,6 +64,15 @@ DEPARTAMENTUL CALCULATOARE}
 \newcommand{\orangepm}{\color{orange} \textbf{$\pm$}}
 
 \newcommand{\redxmark}{\color{red} \ding{55}}
+
+
+
+\definecolor{darkbrown}{rgb}{0.59, 0.29, 0.0}
+\definecolor{celestialblue}{rgb}{0.19, 0.49, 0.72}
+\definecolor{deepchampagne}{rgb}{0.88, 0.74, 0.55}
+\definecolor{munsell}{rgb}{0.0, 0.56, 0.45}
+\definecolor{jazzberryjam}{rgb}{0.65, 0.04, 0.37}
+\definecolor{darkelectricblue}{rgb}{0.33, 0.41, 0.47}
 
 \begin{document}
 %\frontmatter
@@ -98,11 +110,12 @@ Absolvent: {\bf \thesisauthor}
 
 Conduc'ator 'stiin'tific: {\bf \thesissupervisor}
 
-\vspace{3cm}
+\vspace{2cm}
 {\bf \thesisyear}
 \end{center}
 
-\thispagestyle{empty}
+\newpage
+$ $
 \newpage
 
 \begin{center}
@@ -119,7 +132,7 @@ Conduc'ator 'stiin'tific: {\bf \thesissupervisor}
 \hspace{-1cm}{\bf Prof. dr. ing. Liviu MICLEA} & {\bf Prof. dr. ing. Rodica POTOLEA}\\  
 \end{tabular}
  
-\vspace{2cm}
+\vspace{1cm}
 
 \begin{center}
 Absolvent: {\bf \thesisauthor}
@@ -219,11 +232,13 @@ Data \hspace{8cm} Nume, Prenume
 %\end{comment}
 
 \newpage
-\pagenumbering{arabic}
-\setcounter{page}{1}
 \tableofcontents
-\newpage
 
+
+\newpage
+\pagenumbering{arabic}
+
+\setcounter{page}{1}
 
 
 \chapter{Introducere - Contextul proiectului}
@@ -273,8 +288,9 @@ Volumul de date cre'ste, 'ins'a pe lâng'a conceptul celor \textit{trei V}: volu
 
 Aten'tia industriei IT ar trebui s'a se concentreze 'in jurul securit'a'tii cibernetice, cu referire mai mult la valoarea datelor, nu la volumul sau sursa lor. Solu'tiile sunt 'si trebuie s'a fie conduse de viziunea 'si gândirea oamenilor, dar validarea solu'tiilor ar trebui s'a fie validate de inteligen'ta datelor. 
  
-Aceste fapte sunt un avantaj competitiv pentru indrustria IT 'si sunt o provocare pentru construirea unei culturi s'an'atoase a datelor.
+Aspectele enumerate sunt un avantaj competitiv pentru indrustria IT 'si sunt o provocare pentru construirea unei culturi s'an'atoase a datelor.
 
+\newpage
 
 \chapter{Obiectivele Proiectului}
 'In acest capitol este prezentat'a tema proiectului, obiectivele 'si cerin'tele func'tionale esen'tiale  ale proiectului.
@@ -287,22 +303,21 @@ Conceptul sistemului este bazat pe arhitectura clasic'a \textit{client-server}, 
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.3]{img/client-server.jpeg}
+\includegraphics[keepaspectratio=true,scale=0.35]{img/client-server.jpeg}
 \caption{Arhitectura Client-Server}
 \label{client_server}
 \end{center}
 \end{figure}
 
-Serverul la rândul s'au având o arhitectur'a bazat'a pe microservicii, fiecare mcroserviciu fiind organizat sub form'a de \textit{layer}. La nivel de aplica'tie, responsabilit'a'tile sunt parti'tionate 'intre server 'si client. La nivelul serverului, func'tionalit'a'tile esen'tiale sunt repartizate 'intre servicii, astfel fiind respectat principiul \textbf{Single-responsability} din SOLID\cite{solid}.
-La nivel de microserviciu func'tionalit'a'tile sunt divizate la nivel de \textit{layer} 'si func'tie.
+Serverul la rândul s'au având o \textbf{arhitectur'a bazat'a pe microservicii}, fiecare mcroserviciu fiind organizat sub form'a de \textit{layer}. La nivel de aplica'tie, responsabilit'a'tile sunt parti'tionate 'intre server 'si client. La nivelul serverului, func'tionalit'a'tile esen'tiale sunt repartizate 'intre servicii, astfel fiind respectat principiul \textit{Single-responsability} din SOLID\cite{solid}. La nivel de microserviciu func'tionalit'a'tile sunt divizate utilizând  \textbf{arhitectur'a layer}.
 
-Serverul se ocup'a de prelucrarea 'si stocarea datelor. Func'tionalit'a'tile cheie sunt: compresie, criptare, conversie, steganografie, monitorizare 'si stocare. Partea de stocare a datelor este 'imp'ar'tit'a 'in 2: fi'siere 'si date personale. Datele utilizator sunt stocate 'iin MongoDB, iar cele despre fi'siiere in Couchbase, este imposibil s'a asociezi un fi'sier cu identiitatea unui utilizator f'ar'a accesul la ambele baze de date.
+Serverul se ocup'a de prelucrarea 'si stocarea datelor. Func'tionalit'a'tile cheie sunt: \textbf{compresie}, \textbf{criptare}, \textbf{conversie}, \textbf{steganografie}, \textbf{monitorizare} 'si \textbf{stocare}. Partea de stocare a datelor este 'imp'ar'tit'a 'in 2: fi'siere 'si date personale. Datele utilizator sunt stocate 'in MongoDB\footnote{https://docs.mongodb.com/}, iar cele despre fi'siiere in Couchbase\footnote{https://www.couchbase.com/}, este imposibil s'a asociezi un fi'sier cu identitatea unui utilizator f'ar'a accesul la ambele baze de date. Mai exist'a o a 3-a baz'a de date, pentru care se utilizeaz'a Redis\footnote{https://redis.io/}, 'in care sunt stocate loggurile din sistem.
 
 Aplica'tia  va trebui s'a fie proictat'a  astfel 'incât s'a poat'a satisface cereri de la sute sau mii de utilizatori concomitent, f'ar'a a implica 'intârzieri mari de r'aspuns. Apliica'tia va trebui s'a fie rezisten't'a la un nivel mare de utilizare 'si s'a se autoscaleze prin crearea unor replici ale aceluia'si cod, doar pentru microserviciile utilizate intens.
 
 Sistemul va oferi utilizatorilor func'tionalit'a'tile de baz'a a unui sistem de stocare 'in \textit{cloud}: 'inc'arcare fi'sier, desc'arcare fi'sier, creare fi'sier nou, grupare fi'siere 'si management fi'siere. Pe lâng'a func'tionalit'a'tile enumerate, sistemul va oferi un nivel de securitate 'inalt prin criptarea tuturor datelor 'si eficien't'a de utilizare a spa'tiului prin compresia datelor. Cheia de criptare/decriptare nu va fi stocat'a nic'aieri 'in server sau client, utilizatorul va ave 'in totalitate responsabilitatea de a 'isi p'astra fi'sierele sigure 'si de a putea recupera datele stocate 'iin sistem, din p'acate este imposibil s'a i se ofere asisiten't'a 'in cazul pierderii parolei, regenerarea ei priin for't'a brut'a ar putea dura 'intre câteva ore 'si câ'tiva ani.
 
-De asemenea la desc'arcarea unui fi'sier, utilizatorul va avea posibilitatea de a ascunde mesaje 'in imagini, sau de a aplica marcaje vizibile pe imagini. Aceast'a func'tionalitate poate fi folosit'a atunci când se partajeaz'a un fi'sier, pentru a determina dac'a datele au fost expuse diin sistem 'si identiitatea celui care le-a expus. Un exemplu de steganografie pe imagini este prezentat 'in figura \ref{stegano_example}.
+De asemenea la desc'arcarea unui fi'sier, utilizatorul va avea posibilitatea de a ascunde mesaje 'in imagini, sau de a aplica marcaje vizibile pe imagini. Aceast'a func'tionalitate poate fi folosit'a atunci când se partajeaz'a un fi'sier, pentru a determina dac'a datele au fost expuse din sistem 'si identitatea celui care le-a expus. Un exemplu de steganografie pe imagini este prezentat 'in figura \ref{stegano_example}. 
 \begin{figure}[H]
 \begin{center}
 \advance\leftskip-3cm
@@ -312,9 +327,9 @@ De asemenea la desc'arcarea unui fi'sier, utilizatorul va avea posibilitatea de 
 \label{stegano_example}
 \end{center}
 \end{figure}
-Dup'a cum se poate observa, manipularea bi'tilor nu este vizibil'a pentru ochiul uman, 'ins'a pentru calculator poate con'tine informa'tii valoroase.
+Dup'a cum se poate observa, manipularea bi'tilor nu este vizibil'a pentru ochiul uman,  deoarece alterarea celui mai putin semnificativ bit nu cauzeaz'a schimb'ari semnificative 'in percep'tie, 'ins'a pentru calculator poate con'tine informa'tii valoroase.
 
-Pentru client, se urm'are'ste implementarea unei aplica'tii web. Aceasta va trebui s'a interac'tioneze cu utilizatorii prin interfa'ta web 'si cu serverul prin apeluri de tip gRPC, pentru a asigura o vitez'a mai bun'a de transmisie 'si r'aspuns. Clientului nu 'ii vor fi cunoscute decât 3 dintre serviciile existente: serviciul de autentificare, servicul de management utilizatori 'si  serviciiul de management fi'siere.
+Pentru client, se urm'are'ste implementarea unei aplica'tii web. Aceasta va trebui s'a interac'tioneze cu utilizatorii prin interfa'ta web 'si cu serverul prin apeluri de tip gRPC\footnote{https://grpc.io/}, pentru a asigura o vitez'a mai bun'a de transmisie 'si r'aspuns. Clientului nu 'ii vor fi cunoscute decât 3 dintre serviciile existente: serviciul de autentificare, servicul de management utilizatori 'si  serviciiul de management fi'siere.
 \section{Obiectivele proiectului}
 \begin{itemize}
 
@@ -322,17 +337,29 @@ Pentru client, se urm'are'ste implementarea unei aplica'tii web. Aceasta va treb
 
 \item[•]{Sistemul va oferi utilizatorilor un nivel 'inalt de securitate a datelor personale prin folosirea unor algoritmi de criptare eficien'ti. Cheile nu vor fi stocate 'in sistem, iar datele vor fi aproape imposibil de decriptat de c'atre atacatori.}
 
-\item[•]{Conexiunea 'intre client 'si server va fi securizat'a utilizând protocolul \textbf{HTTPS}. Astfel se va asigura c'a datele transmise vor fi protejate 'impotriva atcurilor de tipul \textit{man-in-the-middle}.}
+\item[•]{Conexiunea 'intre client 'si server va fi securizat'a utilizând protocolul HTTPS. Astfel se va asigura c'a datele transmise vor fi protejate 'impotriva atcurilor de tipul \textit{man-in-the-middle}.}
 
 \item[•]{Folosirea spa'tiiului de stocare va fi eficientiza'ta prin folosirea unor algoritmii de compresie eficien'ti, care permit reducerea volumului de date de maii mult de 2 ori 'in cazul unor date uzuale.}
 \end{itemize}
 
 \section{Cerin'te}
-'In aceast'a sec'tiune sunt descrise 'si enumerate cerin'tele principale ale sstemului. Acestea se refer'a atât la func'tionalit'a'tile propriu-zise, cât 'si la experien'ta utilizatorului.
+'In aceast'a sec'tiune sunt descrise 'si enumerate cerin'tele principale ale sistemului. Acestea se refer'a atât la func'tionalit'a'tile propriu-zise, cât 'si la experien'ta utilizatorului.
 \subsection{Cerin'te func'tionale}
-Cerin'tele func'tionale definesc func'tiile sistemului sau comportamentul s'au, unde func'tiile sunt descrise ca o specifica'tie sau set de ac'tiuni dintre intrare 'si ie'sire. Pornind de la
-obiectivele proiectului, pot fi determinate urm'atoarele cerin'te func'tionale:
+'In ingineria software, cerin'tele func'tionale definesc func'tiile sistemului sau comportamentul s'au, unde func'tiile sunt descrise ca o specifica'tie sau set de ac'tiuni dintre intrare 'si ie'sire. 
 
+Aplica'tia va oferi func'tionalit'a'ti diferite, 'in func'tie de rolul utilizatorului. Se poate face diistinc'tia 'intre 2 tipuri de utilizatori: utilizator primar 'si administrator. Diagrama rolurilor sistemului este prezentat'a 'in Figura \ref{user_roles}.
+
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.35]{img/user_roles.png}
+\caption{Tipurile de utilizatori ale sistemului}
+\label{user_roles}
+\end{center}
+\end{figure}
+
+Pornind de la obiectivele proiectului, pot fi determinate urm'atoarele cerin'te func'tionale:
 \begin{enumerate}[label=CF\arabic*]
 \item{Ca utilizator ne'inregistrat, doresc s'a 'imi pot crea un cont nou.}
 \item{Ca utilizator, doresc s'a m'a autentific 'in sistem utilizând numele de utilizator 'si parola, care au fost indicate la momentul 'inregistr'arii.}
@@ -351,7 +378,7 @@ obiectivele proiectului, pot fi determinate urm'atoarele cerin'te func'tionale:
 \item{Ca utilizator, doresc s'a pot modifica un fi'sier care se afl'a 'in spa'tiul meu de stocare.}
 \item{Ca utilizator, doresc s'a pot 'sterge un fi'sier din sistemul meu de fi'siere.}
 \item{Ca utilizator, doresc s'a pot schimba directorul 'in care se afl'a un fi'sier.}
-\item{Ca utilizator, doresc s'a pot crea o copie a unui fi'sier 'intr-un alt director, f'ar'a a 'im cr'ste spa'tiul de stocare utilizat.}
+\item{Ca utilizator, doresc s'a pot crea o copie a unui fi'sier 'intr-un alt director, f'ar'a a 'imi cre'ste spa'tiul de stocare utilizat.}
 \item{Ca utilizator, doresc s'a pot desc'arca un fi'sier care se afl'a 'in spa'tiul meu de stocare.}
 \item{Ca utilizator, doresc s'a pot codifica mesaje 'in fi'sierul desc'arcat.}
 \item{Ca utilizator, doresc s'a pot vedea dac'a 'in fi'sierul pe care l-am 'inc'arcat sunt codificate  mesaje.}
@@ -420,7 +447,7 @@ Un monolit poate fi considerat un pattern arhitectural sau un stil de dezvoltare
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.35]{img/monolith_arhichitecture.jpeg}
+\includegraphics[keepaspectratio=true,scale=0.5]{img/monolith_arhichitecture.png}
 \caption{Arhitectura monolitic'a}
 \label{monolith_arch}
 \end{center}
@@ -445,8 +472,8 @@ Arhitectura monolitic'a este abordarea tradi'tional'a care este folosit'a 'in mu
 
 Aceast'a arhitectur'a are 'si plusuri 'si minusuri, dar, dat fiind faptul c'a de fiecare dat'a c'and se rescrie o por'tiune de cod este necesar'a recompilarea 'intregului program, arhitectura monolitic'a  duce la 'intârzieri destul de mari, cauzate de compil'arile repetate a 'intregului program.
 
-\section{Caracteristicile 'si avantajele arhitecturii orientate pe microservicii}
-Microserviciile sunt ni'ste entit'a'ti mici, independente, autonome, create s'a func'tioneze 'impreun'a, fiecare dintre ele este focusat pe un singur lucru 'si  are scopul de a-l face bine.
+\section{Caracteristicile arhitecturii orientate pe microservicii}
+Microserviciile\cite{go_book_microservices} sunt ni'ste entit'a'ti mici, independente, autonome, create s'a func'tioneze 'impreun'a, fiecare dintre ele este focusat pe un singur lucru 'si  are scopul de a-l face bine.
 Arhitectura bazat'a pe microservicii este un stil arhitectural care structureaz'a aplica'tia ca o colec'tie de servicii indepenedente 'si modulare, care sunt u'sor de testat, de 'intre'tinut 'si de 'in'teles.
 Acest tip de abordare duce la cre'sterea agilit'a'tii prin 'imun'at'a'tirea productivit'a'tii 'si sc'aderea timpului de dezvoltare a produsului.
 Microserviciile au demonstrat c'a sunt un sistem de nivel superior, 'in special pentru aplica'tii mari care sunt dezvoltate de mai multe echipe.
@@ -500,7 +527,7 @@ Totu'si, ca oricare alt'a solu'tie, arhitectura bazat'a pe microservicii are o s
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.35]{img/microservices-vs-monolithic.png}
+\includegraphics[keepaspectratio=true,scale=0.5]{img/microservices-vs-monolithic.png}
 \caption{Diferen'ta dintre arhitecturi}
 \label{microservices_vs_monolithic_arch}
 \end{center}
@@ -512,7 +539,7 @@ Arhitecturile modulare reduc riscul schimbarilor nedorite sau neanticipate dintr
 \section{Microservicii 'in Cloud}
 
 Resursele 'in \textit{Cloud} sunt disponiibile 'si puse la dispozi'tia atunci când sunt necesare. Comparativ cu o infrastructur'a clasic'a, nu exist'a o limit'a practic'a a acestora.
-Diferite medii de dezvoltare 'si versiuni de servicii pot co-exista 'iin mod temporar sau permanent. Programatorul nu mai este nevoit s'a gheasc'a sau s'a calculeze cerin'tele 'si capacitatea de consum a sistemului. La cerere resursele pot fi scalate sau diminuate f'ar'a interven'tie 'in partea fizic'a a sistemului.
+Diferite medii de dezvoltare 'si versiuni de servicii pot co-exista 'in mod temporar sau permanent. Programatorul nu mai este nevoit s'a gheasc'a sau s'a calculeze cerin'tele 'si capacitatea de consum a sistemului. La cerere resursele pot fi scalate sau diminuate f'ar'a interven'tie 'in partea fizic'a a sistemului.
 
 Faptul c'a pl'ate'sti doar ceea ce utilizezi reduce considerabil pre'tul experiment'arii, dar 'si cre'ste posibilit'a'tile de experimentare. Noi func'tiionalit'a'ti pot fi integrate, pot fi oprite 'si restartate cu noi parametri 'in cazul unui e'sec. Datorit'a cloudului se pot efectua numeroase experimente f'ar'a riscuri, acets lucru constituind cheia de succes a inova'tiei. Acest fapt se potrive'ste ideal cu conceptul de \textit{microservicii}, oferind posibilitatea de a atinge un nivel 'inalt de agilitate.
 
@@ -524,7 +551,6 @@ Gândirea, perfec'tionarea continu'a, livrarea continu'a, managementul, monitori
 Arhitectura bazat'a pe microservicii este o abordare distribuit'a, dezvoltat'a pentru a rezolva limit'arile arhitecturii monolitice clasice. Microserviciile faciliteaz'a scalarea apliica'tiilor sau a anumitor module ale aplica'tiei. Totu'si sunt o provocare din punctul de vedere a complexit'a'tii arhitecturale 'si a oper'arii sistemului. Serviciile cloyd contribuie la reducerea acestei complexit'a'ti prin oferirea unor func'tionalit'a'ti preimplementate de management al serviciilor.
 
 \section{Securitatea in sistemele informatice}
-
 
 Securitatea aplica'tiilor cuprinde m'asurile luate pentru a asigura 'si a 'imbun'at'a'ti securitatea sistemului. Deseori aceasta este asigurat'a prin g'asirea, 'inl'aturarea 'si prevenirea vunlnerabilit'a'tilor de securitate. Sunt utiilizate mai multe tehnici pentru a ob'tine acest lucru, acestea pot fi aplicate la diferite etape ale ciclului de dezvolatare, cum ar fi: \textit{design, dezvoltare, livrare, perfec'tionare sau mentenan't'a}.
 
@@ -558,12 +584,59 @@ M'asurile esen'tiale pentru securitate vor fi discutate 'in sec'tiiunile ce urme
 \subsection{Criptografia}
 Criptografia - este utilizat'a pentru ascunderea mesajelor. Exist'a numeroase metode de criptare a datelor 'incepând cu Cifrul lui Caesar, una dintre cele mai primitive metode de criptare exiistente, terminând cu AES 'si RSA, acre sunt metodele de criptare standardizate, considerate aproape invincibile 'in momentul de fa't'a. Totu'si criptografia nu este o solu'tie general 'apentru securitate, aceasta este privit'a mai mult ca un \textit{tool}. Adversarul principal al criptografiei este - criptanaliza, 'stin'ta destinat'a descifr'arii mesajelor criptate prin analiza datelor de intrare 'si ie'sire ale unui algoritm.
 
+Pentru criptarea 'si decriptarea fi'sierelor, a fost selectat algoritmul \textit{twofish}\cite{two_fish_papper}. Acesta este un cifru cu cheie simetric'a, blocurile de date au o lungime de pân'a 'in 128 bi'ti, iar cheile utilizate pot avea lungimi de pân'a la 256 bi'ti. Algoritmul a participat 'in concursul AES, a fost printre ultimii finali'sti, dar nu a fost selectat pentru standardizare. Eficien'ta 'si siguran'ta acestui algoritm este apropiat'a de cea a actualului AES, acesta fiind mai 'incet pentru chei de 128 de bi'ti, dar mai rapid pentru chei de 256 de bi'ti. Algoritmul se bazeaz'a pe \textit{re'tele Feistel}, opera'tia fundamental'a a algoritmului este maparea datelor de intrare 'in func'tie de cheie 'in date de ie'sire, func'tia fiind non linear'a 'si non-surjectiv'a. Un alt element cheie al algoritmului este \textit{S-boxes} - acestea sunt substitu'tii non lineare folosite 'in majoritatea cifrurilor pe blocuri. Alte opera'tii folosite sunt map'arile cu ajutorul matricilor MDS, transform'arile Pseudo-Hadamard  'si opera'tia fundamental'a XOR. 'In Figura \ref{twofish_round} este reprezentat'a o rund'a din algoritm.
 
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.35]{img/twofish_round.png}
+\caption{Diferen'ta dintre arhitecturi}
+\label{twofish_round}
+\end{center}
+\end{figure} 
+Avantajele principale ale algoritmului sunt: \textit{performan'ta}, \textit{flexibilitate}, \textit{simplicitate} 'si \textit{eficien't'a}.
+
+Algoritmul selectat pentru criptarea parolelor este \textbf{Argon2}. Acest algoritm a fost ale câ'stig'atorul competi'tiei \textit{Password Hashing Competition}\footnote{https://password-hashing.net} 'in Iulie 2015. Exist'a 3 versiuni al acestui algoritm:
+\begin{itemize}
+\item{\textit{Argon2d} maximizez'a rezisten'ta la atacurile care folosesc GPU. Acesta acceseaz'a memoria 'intr-o ordine care depide de caracterele parolei, 'si reduce riscul atacurilor cauzate de dependen'tele memorie-timp}
+\item{\textit{Argon2i} reduce riscul atacurilor bazate pe canale auxiliare.}
+\item{\textit{Argon2id} versiune hibrid'a a celor 2 men'tionate anterior, are avantajele ambelor versiuni 'si este recomandat de a fi utilizat.}
+\end{itemize}
+Toate 3 versiuni permit configurarea a 3 parametri de contro: timp execu'tie, memorie cerut'a 'si gradul paralelismului.
+
+Nu exista date oficiale sau publice cu referire la atacuri soldate cu succes asupra Argon2d sau Argon2di. Spre deosebire de algoritmii similari, cum ar fi bcrypt sau PBKDF2, argon2 este foarte eficient, forte sigur 'si simplu de configurat.
 \subsection{Compresia}
+'In procesarea de date, compresia\cite{understanding_compression} este un proces care presupune encodarea datelor utilizând mai pu'tini bi'ti decât 'in setul de date ini'tial. Compresia poate fi de 2 tipuri: \textit{cu pierderi} sau \textit{f'ar'a pierderi}. Compresia f'ar'a pierderi reduce num'arul de bi'ti prin identificarea 'si eliminarea redundan'tei statistice. Compresia cu pierderi se bazeaz'a pe reducerea dimensiunii datelor prin eliminarea informa'tiei redundante sau nesemnificative, la efectuarea procesului invers datele nu vor fi egale cu cele ini'tiale.
 
+Avantajele compresiei sunt: 
+\begin{itemize}
+\item{\textbf{Reducerea dimensiunii datelor} - este util'a la transmitere 'si stocare, deoarece reduce timpul de procesare 'si scade costul de stocare}
+\item{\textbf{Reducerea entropiei datelor} - 'in cazul cript'arii, procesul de atacuri de for't'a brut'a devine mai complicat, nu se poate face analiz'a statistic'a.}
+\end{itemize}
+
+Unul dintre cei mai eficien'ti algoritmi de compresie este \textit{zlib}\footnote{https://zlib.net}.  Acesta este un algoritm open-source, nepatentat, disponibil pe toate platformele 'si pentru diverse tipuri de date, de la text la video. 
+
+Compresia a forst 'si r'amâne a fi cetrul unei schimb'ari masive 'in ingineria calculatoarelor. Motivul fiind o simpl'a teorie economic'a: fi'sierele compresate sunt fi'siere mai mici. Datorit'a acestui fapt: sunt mai u'sor de transmis, mai u'sor de prelucrat, mai u'sor de stocat 'si, desigur, mai ieftine. Distribuitorii pl'atesc mai pu'tin s'a le distribuie, iar clien'tii pl'atesc mai pu'tin s'a le consume. 'In lumea 'in care calculele sunt echivalente cu banii, compresia reprezint'a cea mai viabil'a solu'tie economic'a.
 \subsection{Steganografia}
+Steganografia\cite{crypto_stegano} este o tehnic'a de protec'tie a datelor, aceasta ofer'a solu'tii eficiente pentru controlul accesului la date private. Datele din imagini sunt disponibile doar pentru oamenii care cunosc modul de extragere a lor.
 
-\section{Sisteme similare}
+Steganografia bazat'a pe modificarea celui mai nesemnificativ bit este o metod'a simpl'a 'si eficient'a de encodare a informa'tiilor ascunse. Vizual nu se observ'a diferen'ta dintre imaginea ini'tial'a 'si imaginea care con'tine date encodate 'in cel ai nesemnificativ bit. La o analiz'a statistic'a se pot decoda datele 'si algoritmul nu mai este fezabil. Pentru a ob'tine o securitate mai ridicat'a, a se utilizeaz'a o metod'a 'in care nu se ascund datele 'in intreaga imagine, ci doar 'in pixelii de pe margine. Pentru complicarea analizei statistice se adaug'a encodarea datelor 'in zig-zag.
+
+De-a lungul timpului s-au dezvoltat foarte multe metode de steganografie, unele eficiente, altele mai pu'tin eficiente, dezavantajul cel mai mare al steganografiei r'amâne faptul c'a odat'a ce metoda a fost descoperit'a, aceasta nu mai poate fi folosit'a. O solu'tie eficient'a este criptarea mesajului 'inainte de encodare.
+
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.6]{img/stegano_example.png}
+\caption{Exemplu de encodare a unui byte}
+\label{stagano_example}
+\end{center}
+\end{figure} 
+
+Dup'a cum se poate observa din Figura \ref{stegano_example}, pentru encodarea unui octet se execut'a 8 pa'si, bi'tii sunt encoda'ti alternativ 'in marginile imagini. Aceast'a metod'a nu poate fi considerat'a 100\% sigur'a, 'ins'a reduce riscul descoperirii datelor 'in cazul unei analize statistice clasice, datele se pot afla doar 'stiind ordinea exact'a de codificare.
+\section{Sisteme similare}\label{sisteme_similare}
 Acest capitol reprezint'a clasificarea si analiza sistemelor similare existente, bazat'a pe etapa de cercetare a proiectului. Sistemele au scop 'si functionalit'a'ti similare cu proiectul propus. Sistemele alese pentru compara'tie sunt:
 \begin{itemize}
 \item[•] CloudMe
@@ -631,7 +704,7 @@ Da & Da & Da & Da & Da &  Nu & Nu & Nu    \\
   % titlul tabelului
 \label{table:cloudmefeaturetable}             
 \end{table}
-
+%%% move cites of official documentation to footnote
 Tabelul \ref{table:cloudmesystemtable} prezint'a disponibilitatea \textbf{CloudMe} pe diferite platforme 'si pretul acestuia.
 \begin{table}[H]
 \centering
@@ -978,7 +1051,7 @@ Da & Da & Da & 40\euro \\
 \label{table:pcloudsystemtable}             
 \end{table}
 
-Securitatea este unul dintre punctele forte ale sistemului, dezvoltatorii 'incearc'a s'a ofere servicii la cel mai 'inalt nivel 'si sa ofere func'tionalit'a'ti care nu sunt prezente la competitori. Sistemul folose'ste key de 256 biti 'si TSL pentru transmisia de date. Securitatea 'ins'a vine 'si cu un pre't, fi'sierele nu pot fi modificate 'in sistem, deoarece opera'tiile de criptare 'si decriptare ar trebui efectuate repetat, provocând costuri de prelucrare ridicate. De asemenea, sediul central al companiei se afl'a 'in Elve'tia, unde sunt cele mai stricte reguli de protec'tie a datelor, astfel utilizatorul poate fi lini'stit cu privire la integritatea datelor sale.
+Securitatea este unul dintre punctele forte ale sistemului, dezvoltatorii 'incearc'a s'a ofere servicii la cel mai 'inalt nivel 'si sa ofere func'tionalit'a'ti care nu sunt prezente la competitori. Sistemul folose'ste chei de 256 biti 'si TSL pentru transmisia de date. Securitatea 'ins'a vine 'si cu un pre't, fi'sierele nu pot fi modificate 'in sistem, deoarece opera'tiile de criptare 'si decriptare ar trebui efectuate repetat, provocând costuri de prelucrare ridicate. De asemenea, sediul central al companiei se afl'a 'in Elve'tia, unde sunt cele mai stricte reguli de protec'tie a datelor, astfel utilizatorul poate fi lini'stit cu privire la integritatea datelor sale.
 
 Datele 'inc'arcate sunt repartizate 'in func'tie de tipul de date: imagini, documente, muzica 'si video.
 
@@ -1075,34 +1148,63 @@ sync.com & \greencheck & \greencheck & \greencheck & \greencheck & \redxmark & \
   % titlul tabelului
 \label{table:comparationtable}             
 \end{table}
-Majoritatea sistemelor ofer'a criptarea datelor, unele au metode imposibil de spart, altele au metode mai simple 'si pu'tin sigure. Sistemul propus cripteaz'a datele utilizatorului utilizând algoritmi auto-calibrabili  care evolueaz'a 'in func'tie de sistemul pe care ruleaza aplica'tia sau de trecerea timpului. De asemenea sistemul folose'ste cei mai noi si siguri algoritmi TwoFish 'si PBFK2, care au fost modifica'ti s'a foloseasc'a key mai sigure de o lungime de 256 'si 512 bi'ti.
+Majoritatea sistemelor ofer'a criptarea datelor, unele au metode imposibil de spart, altele au metode mai simple 'si pu'tin sigure. Sistemul propus cripteaz'a datele utilizatorului utilizând algoritmi auto-calibrabili  care evolueaz'a 'in func'tie de sistemul pe care ruleaza aplica'tia sau de trecerea timpului. De asemenea sistemul folose'ste cei mai noi si siguri algoritmi TwoFish 'si PBFK2, care au fost modifica'ti s'a foloseasc'a chei mai sigure de o lungime de 256 'si 512 bi'ti.
 
 Un aport nou pe care 'il aduce sistemul 'si nu a fost observat la niciuna dintre aplica'tiile studiate este semn'atura pe fi'siere, pentru a detecta furtul de date prin extragerea codului - tehnica folosit'a este steganografia.
 
+Sistemul elaborat este mai mult un prototip, care poate fi dezvoltat, devenind un competitor pentru cele enumerate mai sus. Se pot ad'auga func'tionalit'a'ti suplimentare pe partea de partajare de fi'siere. 
 
-	Sistemul elaborat este mai mult un prototip, care poate fi dezvoltat, devenind un competitor pentru cele enumerate mai sus. Se pot ad'auga func'tionalit'a'ti suplimentare pe partea de partajare de fi'siere. 
 
+\chapter{Analiz'a 'si Fundamentare Teoretic'a}\label{ch:analysis}
+\section{Arhitectura conceptual'a a sistemului}
+Aceast'a sec'tiune reprezinta arhitectura conceptual'a a sistemului,  prezentat'a  'in Figura \ref{diagrama_system}.
 
-\chapter{Analiz'a 'si Fundamentare Teoretic'a}
-\label{ch:analysis}
-
-\section{Cazuri de utilizare}
 \begin{figure}[H]
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.4]{img/use_case_diagram.png}
+\includegraphics[keepaspectratio=true,scale=0.45]{img/diagrama_system.png}
+\caption{Arhitectura sistemului}
+\label{diagrama_system}
+\end{center}
+\end{figure}
+ Sistemul a fost 'imp'ar'tit 'in microservicii 'in fuc'tie de principalele func'tionalit'a'ti ale sistemului. Divizarea sistemului 'in microservicii contribuie la \textit{sc'aderea nivelului de cuplare} a componentelor 'si \textit{cre'sterea coeficientului de coeziune}.
+
+ Aplica'tia client este de asemenea un microserviciu care asambleaz'a serviciile serverului 'si expune func'tionalit'a'tile pentru client. Arhitectura clientului este reprezentat'a 'in Figura \ref{client_arch}.
+ 
+ \begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.58]{img/client_arch.png}
+\caption{Arhitectura clientului}
+\label{client_arch}
+\end{center}
+\end{figure}
+ 
+Serviciile din care este format clientul nu interac'tioneaz'a 'intre ele 'si pot fi considerate entit'a'ti separate. Acest lucru contribuie la sc'aderea num'arului de erori cauzate de interac'tiunea serviciilor.
+\section{Cazuri de utilizare}
+'In aceast'a sec'tiune sunt descrise cazurile de utilizare ale sistemului, acestea sunt prezentate 'in Figura \ref{use_cases_diagram}. Au fost identificate 2 tipuri de utilizatori:
+\begin{itemize}
+\item[•] \textbf{Utilizator primar} - principalul client al sistemului, are dreptul de a crea, 'inc'arca 'si dec'arca fi'siere.
+\item[•] \textbf{Administrator} - pe lâng'a atribu'tiile unui utilizator ordinar, are dreptul de a vizualiza to'ti utilizatorii primari 'si de a le bloca sau debloca contul.
+\end{itemize}
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.55]{img/use_case_diagram.png}
 \caption{Use cases}
 \label{use_cases_diagram}
 \end{center}
 \end{figure}
-\subsection{Actori}
+Din diagram'a se pot observa ramific'arile 'si compozi'tia din cadrul cazurilor de utilizare stabilite.
 \subsection{Modele de cazuri de utilizare}
-\section{Arhitectura canceptual'a a sistemului}
-
+% TODO : Descrie cazuri de utilizare
 \section{Tehnologii}
+'In acest'a sec'tiune sumt descrise tehnologiile folosite pentru implementarea proiectului 'si avantajele pentru care au fost selectate.
 \subsection{Golang}
-Golang  este un limbaj de programare care a ap'arut 'in 2007. Este un limbaj care care ofera analiz'a static'a a codului: \textit{gofmt} - formatarea static'a a codului, \textit{golint} - stilizarea codului, \textit{godoc} - documentarae codului, acestea ofer'a o siguran't'a asupra codului scris. 'In figura \ref{golang_pic} este reprezentat'a emblema oficial'a a Golangului.
+\textit{Golang}  este un limbaj de programare care a ap'arut 'in 2007, fiind 'si un proiect \textit{open source}. Este un limbaj care care ofera analiz'a static'a a codului: \textit{gofmt} - formatarea static'a a codului, \textit{golint} - stilizarea codului, \textit{godoc} - documentarae codului, acestea ofer'a o siguran't'a asupra codului scris. 'In figura \ref{golang_pic} este reprezentat'a emblema oficial'a a Golangului.
 \begin{figure}[H]
 \begin{center}
 \advance\leftskip-3cm
@@ -1112,21 +1214,126 @@ Golang  este un limbaj de programare care a ap'arut 'in 2007. Este un limbaj car
 \label{golang_pic}
 \end{center}
 \end{figure}
+Go ofer'a un tool pentru testare integrat 'in limbaj, acesta a fost elaborat pentru simplitate 'si eficien't'a. Avantajul cheie este concuren'ta, care este o particularitate integrat'a 'in limbaj, lucru care face limbajul s'a fie rapid, acest fapt este datorat \textit{go rutinelor}, care au nevoie de un management mai simplu, efectuat la nivel de limbaj, nu platform'a. Limbajul dispune de \textit{Garbage Collector}, ceea ce permite eficien'ta managementului de memorie 'si resurse. Tipizarea este un alt avantaj al Golangului, acesta 'il face rezistent la erori cauzate de erorile de conversie.
 
-Go ofer'a un tool pentru testare integrat 'in limbaj, acesta a fost elaborat pentru simplitate 'si oficien't'a. Golang ofer'a un API foarte simplu care poate fi folosit pentru orice tip de teste.
+Limbajul ofer'a un API foarte simplu care poate fi folosit pentru orice tip de teste. Framework-ul este integrat 'in libaj 'si permite crearea simpl'a a testelor tabelare, efectuarea verific'arilor de acoperire a testelor. Limbajul permite analiza static'a a codului, aceasta poate fi folosit'a pentru generarea automat'a a documenta'tiei 'si detec'tia unor eventuale erori, cum ar fi: erori netratate, variabile neutilizate, metode neapelate 'si lipsa verific'arilor de tip 'inate de efectuarea unei conversii sau a unui \textit{cast}.
 
+Printre marele companii care utilizeaz'a Golang se num'ar'a: Google, YouTube, Facebook, Apple, Docker, Dropbox, Twitter, Netflix, Ethereum, Kubernetes, User, Couchbase, IBM 'si altele.
+Dropbox, sistem descris 'in sec'tiunea \ref{dropbox}, a migrat câteva dintre func'tionalit'a'tile sale criptice spre Go 'in 2013. Sistemul a fost scris ini'tial 'in Python, scopul trecerii a fost cre'stere performan'tei, cre'sterea num'arului de clien'ti 'si viteza de dezvoltare software.
 
-
+Datorit'a performan'tei, vitezei de procesare 'si r'aspuns, Golang a fost selectat ca limbaj primar pentru acest proiect. Un alt motiv ar fi 'si faptul c'a mai multe sisteme care efetuez'a opera'tii cu volume de date destul de mari au optat pentru acest limbaj, lucru care denot'a faptul c'a este potrivit pentru procesare de fi'siere mari.
 \subsection{gRPC}
-\subsection{VueJS}
-\subsection{MongoDB}
-\subsection{Couchbase}
-\subsection{HTML, CSS, Bootstrap}
-\subsection{JSON Web Token(JWT)}
-\subsection{Docker 'si Kubernetes}
-\subsection{Google Cloud}
-\subsection{Git}
+gRPC este un \textit{framework} RPC foarte performant, care poate rula pe orice platform'a 'si 'in orice mediu. Acesta poate conecta 'intr-un mod eficient serviciile din diferite centre de date, acesta suport'a balansarea, urm'arirea, verificarea func'tion'arii corecte 'si autentificarea. Acesta este de asmenea aplicabil 'in cazul sistemelor distribuite pentru conectarea dispozitivelor, aplica'tiilor mobile 'si a browserelor la serviciile de back-end.
 
+Avantajele \textit{framework}-ului gRPC sunt:
+\begin{itemize}
+\item{\textbf{Definirea simpl'a a serviciilor} - definirea este posibil'a prin \textit{Protocol Buffers}, care sunt un limbaj performant de serializare binar'a.}
+\item{\textbf{Simplu de utilizat 'si scalat} - instalarea mediului de lucru se poate face 'in câ'tiva pa'si simpli 'si se poate scala la milioane de apeluri RPC pe secund'a.}
+\item{\textbf{Compatibil cu multiple limbaje 'si platforme} - se poate genera 'in mod automat codul pentru server 'si client gRPC 'in numeroase limbaje, cum ar fi: Java, Go, C\#, C++, JavaScript, Python. }
+\item{\textbf{Streaming bi-directional 'si autentificare integrat'a} - se poate face streaming bi-direc'tional 'si dispune de autentificare integrat'a 'si configurabil'a cu transport prin HTTP/2.}
+\end{itemize}
+Datorit'a avantajelor sale, acest tool este folosit de companii precum: Netflix, CoreOS, Carbon3D, Cisco, Google 'si multe altele.
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.5]{img/gRPC_example.png}
+\caption{Exemplu de interac'tiune gRPC}
+\label{gRPC_example}
+\end{center}
+\end{figure}
+'In gRPC o aplica'tie client poate apela metodele aplica'tiei server care ruleaz'a pe alt dispozitiv de parc'a ar fi metode locale, modelul de interac'tiune a clientului 'si serverului este prezentat 'in Figura \ref{gRPC_example}. Principiul principal al gRPC este definirea serviciilor, metodelor 'si parametrilor acestora prin \textit{Protocol Buffers}, un exemplu de defini'tie a unui serviciu este prezent 'in Anexa \ref{sectiuni_cod}.
+
+Porning de la defini'tia fi'sierului \textit{.proto}, gRPC ofer'a compilatorul pentru fi'sierele protobuf care genereaz'a codul client 'si sever. Utilizatorii gRPC apeleaz'a APi-urile de pe partea de client 'si le implementeaz'a pe partea de server.
+
+'In concluzie, principalul motiv pentru care gRPC a fost selectat pentru proiectul respectiv este viteza de comunicare a 2 entit'a'ti ce utilizez'a aceast'a metod'a. API-urile create cu ajutorul protocolului gRPC sunt mult mai performante decât cele create cu ajutorul metodei clasice REST, timpul de r'aspuns mic'sorându-se de la 15 ms la 1.71 ms pentru fiecare apel. Num'arul mediu de apeluri variaz'a de la 600 apeluri/minut la 1700 apeluri/minut.
+\subsection{Vue.JS}
+Vue.js este un framework progresiv de JavaScript, utilizat pentru construirea unor interfe'te utilizator 'si aplica'tii web. Vue utilizez'a template-uri cu sintax'a bazat'a pe HTML care permit randarea paginilor utilizând asocierea elementelor cu datele de instan't'a ale componentei Vue a aplica'tiei.
+
+Vue folose'ste un sistem reactiv bazat pe Javascript pur care permite optimizarea re-rand'arii. Acest sistem folose'ste urm'arirea dependen'telor, pentru a 'sti când trebuie re-randate componentele 'si care dintre ele trebuie randate. La fel ca majoritatea framework-urilor de JS, Vue ofer'a suport nativ pentru TypeScript, fapt care 'in ofer'a 'si mai mult'a flexibilitate.
+
+Avantaje cheie ale Vue.js sunt: 
+\begin{itemize}
+\item{\textbf{Are de dimensiuni mici}  - popularitatea framework-urilor Javascript depinde mult de dimensiune, cu cât este un framework mai mic cu atât va fi mai folosit.}
+\item{\textbf{Abordare simpl'a} - Vue este foarte simplu de integrat 'in orice proiect web existent. Acest lucru face Vue.js s'a fie foarte avantajos 'in dezvoltarea rapid'a a aplica'tiilor web.}
+\item{\textbf{Flexibilitate} - aplica'tiile Vue pot fi rulate u'sor din browser, fiecare schimbare 'in cod este detectat'a 'si aplica'tia este recomplilat'a automat. Aceast'a abordare este deosebit de util'a 'in timpul test'arii aplica'tiilor. }
+\item{\textbf{Versatilitate 'in privin'ta dimensiunii aplica'tiilor} - Vuex este un feature al Vue.js care este folosit pentru pentru managementul bazat pe stare 'si func'tii de rutare. Acesta poate fi folosit pentru construirea unor func'tii mai largi 'si mai complexe. }
+\item{\textbf{Integrare simpl'a} - framework-ul are ni'ste capabilit'a'ti de integrare uimitoare cu aplica'tiile existente, fapt datorit'a c'aruia i-a crescut popularitate 'in comit'a'tile de developeri.  }
+\end{itemize}
+
+Avantajele framework-ului l-au f'acut s'a câ'stige popularitate 'inc'a de la apar'tia acestuia, printre utilizatorii Vue.JS se num'ar'a Adobe, Gitlab, Netflix, Xiaomi, Codeship 'si al'tii. Acesta este foarte flexibil 'si versatil, dar find foarte nou, are o comunitate destul de restrâns'a de programatori, unele func'tionalit'a'ti 'si probleme nu sunt documentate, din acest punct dezvoltarea devine mult mai complicat'a.
+\subsection{MongoDB}
+MongoDB este o baz'a de date orientat'a pe documente, aceasta este disponibil'a pe mai multe platforme. Avantajele cheie ale sistemului sunt performan'ta, nivelul ridicat de disponibilitate 'si scalabilitate. Baza de date este container-ul fizic pentru  coloec'tii. Colec'tiile la rândul lor sunt un grup de documente. Documentele sunt  un set de perechi cheie valoare. Documentele au o schem'a dinamic'a 'si nu trebuie s'a aib'a aceea'si structur'a. 
+
+Avantajele cheie ale MongoDB sunt:
+\begin{itemize}
+\item{\textbf{Lipsa schemei} - MongoDB este o baz'a de date bazat'a pe documente, fapt care ofer'a programatorilor libertatea de a stoca 'si grupa datele 'in orice mod. Structura unui obiect este foarte simpl'a 'si clar'a.}
+\item{\textbf{Flexibilitate query-urilor} - Se pot executa filtr'ari complexe, datorit'a unui limbaj de \textit{query} foarte versatil.}
+\item{\textbf{Este u'sor de scalat} - scalarea bazei de date poate fi configurat'a foarte u'sor.}
+\item{\textbf{Suport pentru diferite tipuri de date} - datorit'a structurii datelor, nu mai este necesar'a consersia sau maparea datelor aplica'tiei la un tip specific, acestea sunt convertite automat in BSON.}
+\item{\textbf{Este bine documentat} - fiind foarte popular, MongoDB dispune de o documenta'tie foarte bine definit'a.}
+\item{\textbf{Indexarea} - se pot crea indec'si, ace'stia contribuie la cre'sterea vitezei de c'autare.}
+\end{itemize}
+
+De'si MongoDB nu dispune de câteva avantaje ale bazelor de date rela'tionale, cum ar fi \textit{exchange} 'si \textit{join}, 'ins'a scalabilitatea pe orizolntal'a 'si  adaptabilitatea schemei 'ii ofer'a un avataj deosebit 'si 'il fac un sistem foarte performant 'si popular. Deasemenea dou'a motive importante pentru care se potrive'ste acestui proiect sunt:  \textit{nivelul de criptare suplimentar pe care 'il ofer'a} 'si \textit{eficien'ta 'in lucrul cu big data.}. Aceast'a baz'a de date a fost selectat'a pentru stocarea datelor utilizatorilor, deoarece ofer'a un suport simplu 'si amplu.
+
+\subsection{Couchbase}
+Bazele de date NoSQL au schimbat procesul de dezvoltare a aplica'tiilor software din punctul de vedere a adaptabilit'a'tii schemei dinamice 'si a scalabilit'a'tii. Comparând 'intre ele sistemele de baze de date NoSQL existente, Couchbase\cite{learning_couchbase}  este una dintre cele mai rapide. Este u'sor de cofigurat 'si are ni'ste func'tionalit'a'ti puternice pentru stocarea datelor cu diverse structuri. Pentru extragerea datelor uilizeaz'a tehnica \textit{map-reduce}, ceea ce face viteza de procesare s'a creasc'a considerabil.  'In sistem, datele sunt stocate ca o pereche cheie-valoare, o citire a datelor se poate efectua 'intr-uun singur pas 'in cazul 'in care se cunoa'ste cheia obiectului, 'in cazul unor opera'tii mai complexe, timpul de procesare cre'ste. Prin ad'augarea indec'silor se poate efcientiza aproape orice opera'tie.
+
+Echivalentul temenului baz'a de date din terminologiile  rela'tionale, 'in ternCochbase, este numit \textit{bucket}, acesta este un container logic pentru documentele grupate logic. Couchbase ofer'a câteva mecanisme de configurare, interac'tiune 'si monitorizare a clusterelor. Acestea sunt: interfa't'a grafic'a web pentru administrator, administrarea utilizând REST API 'si interfa't'a de control din linia de comand'a. Datorit'a acestor func'tionalit'a'ti, adinistratorul, poate configura, edita 'si expanda baza de date 'intr-un mod simplu 'si eficient.
+
+Securitatea este foarte important'a 'in domeniul de stocare a datelor, Couchbase ofer'a diverse func'tionalit'a'ti care permit configurarea unor controale 'si verifc'ari care asigur'a integritatea 'si securitatea sistemului. Se poate bloca accesul aplica'tiilor de la anumite adrese, sau se pot configura adresele 'si domeniile care pot accesa sistemul. De asemenea, la fel ca 'si MongoDB, Couchbase ofer'a un nivel suplimentar de criptare a datelor stocate.
+
+Viteza, nivelul 'inalt de securitate, viteza de operare a datelor 'si configurabilitatea fac Couchbase s'a fie cel mai potrivit sistem pentru stocarea fi'sierelor din aplica'tie. Un avantaj semnificativ sunt func'tionalit'a'tile de procesare a datelor cu volum mare. 
+
+\subsection{HTML, CSS, Bootstrap}
+HTML\textit{(HyperText Markup Language)}\footnote{https://developer.mozilla.org/en-US/docs/Web/HTML} este blocul de baz'a pentru construirea paginilor Web. Acesta define'ste  structura 'si identitatea con'tinutului web.  Cuvântul \textit{Hypertext} se refer'a la conexiunea unei pagini web cu alta prin \textit{linking}. Elementele structurale a HTML sunt numite \textit{tag}-uri, acestea trebuie structurate ca un arbore multic'ai, r'ad'acina paginii web este tag-ul \textit{<html>}.
+
+CSS\textit{(Cascading Style Sheets)}\footnote{https://developer.mozilla.org/en-US/docs/Web/CSS} este limbajul utilizat 'in web pentru a descrie prezentarea documentelor scrise 'in HTML sau XML. CSS descrie modul  'in care elementele vor fi afi'sate pe ecran, hârtie sau alt tip de media. Se poate configura modul de afi'sare, pozi'tionarea 'si efectele elementelor.
+
+Bootstrap este un framework de front-end care creaz'a condi'tii pentru o dezvoltare mai rapid'a a paginilor web. Acesta include template-uri HTML 'si CSS pentru design-ul elementelor tipografice, butoanelor, formurilor, tabelelor, modalurilor, imaginilor 'si multor altor elemente. Datorit'a acestui framework se pot crea design-uri customizable 'si foarte responsibile.
+
+CSS, 'impreun'a cu HTML 'si alte limbaje formeaz'a nucleul reprezent'arii paginilor Web. F'ar'a CSS orice pagin'a web ar  fi alb'a, f'ar'a posibilitatea de a avea un aranjament customizat al elementelor, doarc cele disponibile 'in HTML: list'a, tabel, div-uri. 
+
+\subsection{JSON Web Token(JWT)}
+JWT\footnote{https://jwt.io} este un standard(RFC 7519\footnote{https://tools.ietf.org/html/rfc7519}) care define'ste transmisia compacta 'si securizat'a a informa'tiilor 'intre 2 sisteme sub form'a de obiect JSON. Aceast'a informa'tie poate fi verificat'a 'si considerat'a de 'incredere, deoarece are o semn'atur'a digital'a. JWT-urile pot fisemnate folosind un secret, prin metoda HMAC sau printr-un algoritm de cheie publica/privat'a folosind RSA.
+
+Contextele 'in care sunt folosite JWT sunt:
+\begin{itemize}
+\item{\textbf{Autorizare}: cel mai comun scenariu 'in care se folose'ste JWT. Imediat dup'a logare, fiecare apel f'acut de utilizator, va include un token, acesta va asigura accesul la rute, servicii, resurse. }
+\item{\textbf{Schimb de informa'tii} - asets tip de token-uri sunt o cale sigur'a de schimb al informa'tiei 'intre 2 utilizatori sau dou'a sisteme. Deoarece acestea pot fi semnate utilizând perechi de chei publice 'si private - avem siguran'ta c'a identitatea expediatorului este autentic'a.}
+\end{itemize}
+ Datorit'a acestor avantaje, JWT au fost alese pentru sistemul de autentificare. Stau la baza unui sistem cu un nivel de securitate 'inalt, astfel scopul proiectului poate fi atins.
+ 
+\subsection{Docker 'si Kubernetes}
+Docker\footnote{https://www.docker.com} este singura platform'a compilare end-to-end, partajare 'si rulare a aplica'tiilor bazate pe containere. Acesta poate efectua managementul unei 'intregi aplica'tii din momentul compil'arii pe calculatorul programatorului pân'a la pasul 'in care ajunge pe cloud. Docker este cea mai rapid'a solu'tie pentru deplotementul unei aplica'tii spre produc'tie. Acesta ofer'a suport securizat pentru livrarea aplica'tiilor pe orice tip de cloud - de la cloud hibrid pân'a la muchie.
+
+Kubernetes\footnote{https://www.docker.com/products/kubernetes} este un sistem de orchestrare open-source, folosit pentru management, plasarea, scalarea 'si rutarea containerelor. Platforma Docker ofer'a un mediu Kubernetes securizat 'si foarte performant, acesta este potrivit pentru atingerea unor scopuri comune 'in dezvoltarea software 'si ofer'a maxim'a flexibilitate.
+
+Atunci când se construie'ste o arhitectur'a bazat'a pe microservicii este necesar'a agregarea tuturor microserviciilor. Kubenetes ofer'a numeroase abstractiz'ari 'si API-uri pentru a permite acest lucru.
+\begin{itemize}
+\item Poduri - un grup de containere care con'tin diverse microservicii ce pot fi conectate ca un 'intreg.
+\item Kubernetes ofer'a load-balancing, identificarea 'si descoperirea microserviciilor pentru a putea fi izolate.
+\item Se poate configura nivelul de interac'tiune 'intre servicii.
+\end{itemize}
+Se poate efectua decuplarea aplica'tiei de ma'sina fizic'a, astfel mai multe microservicii pot convie'tui pe acela'si dispozitiv fizic f'ar'a a interfera. Astfel se reduce costul de consum al arhitecturii bazate pe microservicii.
+
+Kubernetes a fost contruit pentru  a schimba modul, 'in care aplica'tiile sunt construite 'si consumate 'in cloud. Datorit'a combina'tiei dintre Docker 'si Kubernetes sistemul poate avea un grad de \textit{velocitate}, \textit{eficien't'a} 'si \textit{agilitate} mult mai 'inalt. Folosirea Docker 'si Kubernetes cre'ste nivelul de eficien'ta 'si securitate a unei aplica'tii, acestea sunt indispensabile pentru construirae unui mediu securizat de stocare 'si lucru.
+\subsection{Google Cloud}
+Costul resurselor hardware este foarte mare, iar sistemele sunt foarte greu se scalat. Sistemele cloud sunt solu'tia cea mai buná pentru problema respectiv'a. Google Cloud\footnote{https://cloud.google.com} este o solu'ti foarte popular'a pentru servicii 'in cloud. Principalele avantaje sunt: nivelul 'inalt de securitate, criptarea, protec'tia identit'a'tii 'si multe servicii auxiliare pe care le ofer'a.
+
+Motivele pentru care Google Cloud a fost ales ca solu'tie pentru acest sistem sunt:
+\begin{itemize}
+\item{\textbf{Pre't mai sc'azut decât competitorii} - pentru o aplica'tie scalabil'a, la 'inceput de drum, este o solu'tie fezabil'a 'si eficient'a.}
+\item{\textbf{Monitorizarea 'si migrarea 'in timp real a ma'sinilor virtuale} - nici unul dintre marii competitori nu ofer'a aceast'a func'tionalitate. Avantajul oferit const'a 'in faptul c'a repara'tia, scalarea 'si updatarea p'ar'tilor hardware sau software se poate efectua foarte rapid.} 
+\item{\textbf{Performan't'a sporit'a} - poate suporta pân'a la 60000 de apeluri concurente}
+\item{\textbf{Securitatea} - toate datele sunt criptate, toate accesele la componente pot fi efectuate doar dup'a autorizare.}
+\end{itemize}
+Utilizarea platformei Google Cloud ofer'a numeroase avantaje. Nivelul se securitate oferit, precum 'si performan'ta sporit'a 'il transform'a 'intr-o solu'tie potrivit'a pentru rularea unui sistem securizat de stocare.
+\subsection{Git}
+Sistemele de control a version'arii sunt o categorie de tool-uri cu ajutorul c'arora se poate face managementul 'in timp al codului. Datorit'a acestor sisteme se poate monitoriza orice schimbare a codului surs'a, se pot anula 'si modifica diverse schimb'ari.
+
+Git\footnote{https://git-scm.com/about} este 'in momentul actual cel mai popular sistem de control al version'arii. Avantajele pe care le ofer'a sunt: viteza de dezvoltare, managementul simplu al codului, securitatea 'si siguran'ta. \textit{Github}\footnote{www.github.com} este una dintre cele mai populare platforme web care ofer'a servicii de versionare a codului. Acesta ofer'a posibilitatea de a avea un cont gratuit 'si un numár nelimitat de proiecte hostate 'in mod gratuit.
 \chapter{Proiectare de Detaliu 'si Implementare}
 Acest capitol prezint'a deciziile 'si pa'sii de implementare parcur'si 'in ciclul de dezvoltare al proiectului. Sistemul propus este format din 3 subsisteme: aplica'tia web; serverul, care este format din alte subsisteme, 'si bazele de date. Capitolul va oferi o descriere succint'a a tuturor componentelor, incluzând 'sabloanele arhitecturale, 'sabloanele de design 'si algoritmii folositi 'in dezvoltarea proiectului.
 \section{Arhitectura serverului}
@@ -1139,7 +1346,6 @@ Secviciile din care este compus serverul sunt:
 \item Compression service  (descris 'in \ref{s_compession})
 \item Crypto service  (descris 'in \ref{s_crypto})
 \item File service  (descris 'in \ref{s_file})
-\item Logging service  (descris 'in \ref{s_logging})
 \item Watermarking service  (descris 'in \ref{s_watermarking})
 \item User service  (descris 'in \ref{s_user})
 \end{enumerate}
@@ -1148,7 +1354,7 @@ Arhitectura sistemului este prezentat'a 'in figura \ref{system_architecture}
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.43]{img/diagrama_sistem.png}
+\includegraphics[keepaspectratio=true,scale=0.6]{img/diagrama_system.png}
 \caption{Arhitectura sistemului}
 \label{system_architecture}
 \end{center}
@@ -1158,81 +1364,91 @@ De asemenea pentru dezvoltarea serverului au fost folosite 2 tipuri de baze de d
  Microserviciile sunt o modalitate de a desp'ar'ti func'tionalit'a'tile dintr-un sistem. Acestea ne ofer'a flexibilitatea de a scala func'tionalit'a'ti specifice 'si de a fi agili 'in livrarea produselor.
 Dup'a ce func'tionalit'a'tile au fost separate 'in subsisteme dedicate, 'intrebarea urm'atoare ar fi: cum s'a le "lipim" la loc?
 
-'In procesul de stabilire a comunic'arii 'intre servicii am avut o provocare destul de mare: s'a p'astrez cuplarea la un nivel cât mai jos, 'in caz contrar ar putea ap'area: multiple c'aderi, testare necalitattiv'a, dificultate crescut'a de 'in'telegere 'si costuri crescute de consum.
-
-
-
-
-\subsection{Microserviciul de autentificare}  \label{s_auth}
-\subsubsection{Introducere}
-\subsubsection{Arhitectur'a}
-
 \begin{figure}[H]
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.4]{img/auth_arch.png}
+\includegraphics[keepaspectratio=true,scale=0.4]{img/diagrama_cloud.png}
+\caption{Diagrama orchestr'arii 'in Cloud}
+\label{diagrama_cloud}
+\end{center}
+\end{figure}
+'In procesul de stabilire a comunic'arii 'intre servicii am avut o provocare destul de mare: s'a p'astrez cuplarea la un nivel cât mai jos, 'in caz contrar ar putea ap'area: multiple c'aderi, testare necalitattiv'a, dificultate crescut'a de 'in'telegere 'si costuri crescute de consum.
+
+
+\subsection{Microserviciul de autentificare}  \label{s_auth}
+Microserviciul de autentificare este responsabil pentru generarea 'si validarea cheilor de sesiune. Serviciul este organizat pe nivele: acces date, validatori, logic'a de business 'si nivel de API. Arhitectura serviciului este prezentat'a 'in Figura \ref{auth_arch}.
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.5]{img/auth_arch.png}
 \caption{Arhitectura serviciului de autentificare}
 \label{auth_arch}
 \end{center}
 \end{figure}
+\textit{Nivelul de acces date} efectuez'a opera'tii pentru identificarea 'si validarea utilizatorilor 'in func'tie de datele de autentidicare pe care le-a oferit utilizatorul. Baza de date folosit'a este \textit{MongoDB}, serviciul acceseaz'a  accea'si colec'tie ca 'si serviciul de utilizatori. Pentru opera'tia de generare a unui Token de sesiune se caut'a utlizatorul cu creden'tialele care au fost primite de la utilizator, dac'a sunt valide se returneaz'a un Token JWT 'in care sunt encodate datele utilizatorului. Pentru validarea tokenului, la acest nivel, se execut'a opera'tia de verific'are dac'a acesta este existent 'in baza de date 'si nu este expirat. 
 
-\subsubsection{Rezultate ob'tinute}
+Responsabilitatea \textit{Validatorilor} este de a verifica dac'a datele de intrare, cum ar fi parole, emailuri, token-uri sau alte date importante 'indeplinesc ni'ste reguli stricte de format 'si securitate. 
+
+La nivelul \textit{Logicii de Business} se execut'a opera'tii de encodare 'si decodare a token-urilor, se gestioneaz'a accesul la resurse. De asemnea, la acest nivel se iau decizii legate de blocarae unor conturi 'in cazuri de 'incerc'ari repetate de a folosi token-uri invalide.
+
+Nivelul superior, \textit{API gRPC} este responsabil pentru gestionarea cererilor utilizatorilor. Acest nivel con'tine implementaea interfe'tei de comunicare gRPC, fiecare metod'a definit'a 'in protobuf este implementat'a 'si poate fi apelat'a de un client gRPC.
+
+'In \textit{Golang} nu exist'a clase propriu-size, exist'a structuri care, dintr-o perspectiv'a foarte generic'a, pot fi considerate clase. Structurile pot encapsula alte structuri sua alte tipuri de date, pot fi instan'tiate printr-un constructor default care are num'ar varadic de parametri cu nume. 'In Figura \ref{auth_classes} este prezentat'a diagrama de entit'a'ti 'si asocieri a serviciului.
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.5]{img/auth_classes.png}
+\caption{Diagrama de clase a serviciului de autentificare}
+\label{auth_classes}
+\end{center}
+\end{figure}
+
+Cea mai important'a clas'a este AuthServer, acesta extinde gRPCAuthServer, care este o implementare a interfe'tei definite 'in fi'sierul \textit{service.proto}. 
 
 
 \subsection{Microserviciul de criptare} \label{s_crypto}
-\subsubsection{Introducere}
-\subsubsection{Arhitectur'a}
 
 \begin{figure}[H]
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.4]{img/crypto_arch.png}
+\includegraphics[keepaspectratio=true,scale=0.55]{img/crypto_arch.png}
 \caption{Arhitectura serviciului de criptare}
 \label{crypto_arch}
 \end{center}
 \end{figure}
 
-\subsubsection{Rezultate ob'tinute}
-
 
 \subsection{Microserviciul de steganografie 'si marcare}  \label{s_watermarking}
 
-\subsubsection{Introducere}
 Steganografia este 'stiin'ta ascunderii mesajelor, numele provenind de la cuvintele grese'sti \textit{steganos'}, care 'inseamn'a protejat, ascuns, 'si \textit{graphein}, care 'inseamn'a a scrie.
-\subsubsection{Arhitectur'a}
 
 \begin{figure}[H]
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.4]{img/watermarking_arch.png}
+\includegraphics[keepaspectratio=true,scale=0.55]{img/watermarking_arch.png}
 \caption{Arhitectura serviciului de marcaje}
 \label{water_arch}
 \end{center}
 \end{figure}
-
-\subsubsection{Aplica'tiile steganografiei}
-\subsubsection{Rezultate algoritmi}
-
+%%adauga legaturi la steganografie 
 
 \subsection{Microserviciul de compresie} \label{s_compession}
-\subsubsection{Introducere}
-\subsubsection{Arhitectur'a}
-
+Microserviciul de compresie ofer'a 3 func'tionalit'a'ti: compresie text, compresie PNG 'si compresie JPEG. Arhitectura acestuia este prezentat'a 'in Figura \ref{compress_arch}.
 \begin{figure}[H]
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.4]{img/compression_arch.png}
+\includegraphics[keepaspectratio=true,scale=0.55]{img/compression_arch.png}
 \caption{Arhitectura serviciului de compressie}
 \label{compress_arch}
 \end{center}
 \end{figure}
 
-\subsubsection{Rezultate algoritmi}
-Microserviciul de compresie ofer'a 3 func'tionalit'a'ti : compresie text, compresie PNG 'si compresie JPEG.
 
 Compresia de text este bazat'a pe zlib care folose'ste algoritmul DEFLATE, acesta permite utilizarea unui num'ar minim de resurse pentru a ob'tine un rezultat cât mai bun. Algoritmul este unul f'ar'a pierderi.
 Rezultatul bun este ob'tinut datorit'a folosirii arborilor de codificare Huffman, deorece se creaz'a un arbore Huffman optimizat pentru fiecare block de date. Totu'si folosirea Huffman este recomandat'a mai mult pentru mesaje mici, deorece aceasta introduce pentru fiecare block ni'stye instruc'tiuni de decompresie.
@@ -1271,8 +1487,6 @@ Compresia este ob'tinut'a prin 2 pa'si:
 
 \end{longtable}
 \end{small}
-
-
 
 
 \begin{small}
@@ -1390,14 +1604,12 @@ Compresia este ob'tinut'a prin 2 pa'si:
 
 
 \subsection{Microserviciul de fisiere} \label{s_file}
-\subsubsection{Introducere}
-\subsubsection{Arhitectur'a}
 
 \begin{figure}[H]
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.4]{img/file_arch.png}
+\includegraphics[keepaspectratio=true,scale=0.55]{img/file_arch.png}
 \caption{Arhitectura serviciului de fi'siere}
 \label{file_arch}
 \end{center}
@@ -1405,14 +1617,12 @@ Compresia este ob'tinut'a prin 2 pa'si:
 
 
 \subsection{Microserviciul de utilizatori}  \label{s_user}
-\subsubsection{Introducere}
-\subsubsection{Arhitectur'a}
 
 \begin{figure}[H]
 \begin{center}
 \advance\leftskip-3cm
 \advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.4]{img/user_arch.png}
+\includegraphics[keepaspectratio=true,scale=0.55]{img/user_arch.png}
 \caption{Arhitectura serviciului de utilizatori}
 \label{user_arch}
 \end{center}
@@ -1420,12 +1630,23 @@ Compresia este ob'tinut'a prin 2 pa'si:
 
 
 \section{Arhitectura aplicatiei web}
+
 \subsection{Descriere general'a}
+Aplica'tia web a fost scris'a utilizând framework-ul Vue. 'In figura \ref{client_arch} este prezentat'a arhitectura clientului, acesta a fost structurat ca 3 microservicii separate. Fiecare microserviciu comunic'a cu serviciile serverului prin gRPC Gateway construit'a cu ajutorul Envoy.
+ \begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.58]{img/client_arch.png}
+\caption{Arhitectura clientului}
+\label{client_arch}
+\end{center}
+\end{figure}
 \subsection{Descrierea componentelor}
 
 
 \chapter{Testare 'si Validare}
-Acest capitol con'tine descrierea metodei de testare 'si validate a sistemului. Sunt descrise toolurile care au fost folosite 'si este analizat' procentul de acoperire a codului.
+Acest capitol con'tine descrierea metodei de testare 'si validate a sistemului. Sunt descrise toolurile care au fost folosite pentur testarea serverului 'si a clientului. Deasemenea este analizat' procentul de acoperire a codului prin teste.
 
 \section{Testarea serverului}
 Pentru testarea serverului au fost scrise atât \textit{Unit Teste}, cât 'si \textit{Teste de integrare 'si interac'tiune}. Pentru scrierea 'si executarea testelor au fost folosite 2 \textit{tool}-uri: \textit{testing}, care este integrat 'in limbajul \textbf{Golang}, 'si \textit{testify}, care este o libr'arie \textit{open-source} pentru testare 'in limbajul men'tionat. Pentru o mai bun'a testare, 'inainte de dezvoltarea clientului \textit{web}, s-au efectuat opera'tii de testare utilizând fi'sierele \textit{swagger} create pe baza API-ului serviciilor, 'si utilizând tool-ul \textit{Postman}.
@@ -1435,63 +1656,318 @@ Pentru testarea serverului au fost scrise atât \textit{Unit Teste}, cât 'si \t
 \subsection{Reguli de testare 'in Golang}
 Pentru ca testele s'a poat'a fi executate automat, numele fiec'arui fi'sier ar trebui s'a contin'a sufixul \textit{\_test}. Fiecare metod'a de test ar trebui s'a 'inceap'a cu prefixul \textit{Test}. 'Indeplinirea acestor condi'tii permite rularea automat'a a testelor 'intr-un mediu de \textit{Dezvoltare continu'a}.
 
-Scrierea unor teste bune nu este un lucru trivial, 'in multe situa'tii sunt foarte multe cazuri de acoperit, ceea ce 'inseamn'a c'atrebuie scrise multe teste, \textbf{Golang} rezolv'a aceast'a problem'a prin ad'augarea de \textit{teste tabelare}, acestea permit crearea testelor imbricate, care pot fi rulate 'in paralel, asfel fiind mai u'sor de detectat \textit{cursele de date}. Acest tip de testare are un avantaj enorm deorece permite scrierea unui cod citibil 'si foarte u'sor de 'in'teles. Fiind integrate 'in limbaj, acest tip de teste pot fi create 'inainte de cod, imadiat dup'a definirea semn'aturilor de metode, ceea ce este ideal pentru o abordare \textit{Test Driven Developement}.
+Scrierea unor teste bune nu este un lucru trivial, 'in multe situa'tii sunt foarte multe cazuri de acoperit, ceea ce 'inseamn'a c'atrebuie scrise multe teste, \textbf{Golang} rezolv'a aceast'a problem'a prin ad'augarea de \textit{teste tabelare}, acestea permit crearea testelor imbricate, care pot fi rulate 'in paralel, asfel fiind mai u'sor de detectat \textit{"data race"}. Acest tip de testare are un avantaj enorm deorece permite scrierea unui cod citibil 'si foarte u'sor de 'in'teles. Fiind integrate 'in limbaj, acest tip de teste pot fi create 'inainte de cod, imadiat dup'a definirea semn'aturilor de metode, ceea ce este ideal pentru o abordare \textit{Test Driven Developement}.
 
 De asemnenea, \textbf{Golang} permiite ad'agarea de func'tii ajut'atoare, a c'aror ordine 'si frecven't'a de rulare poate fi cond'tionat'a, acestea pot fi precondi'tii/postcondi'tii globale sau locale.
 
 \subsection{Testarea serviciilor}
 
-Pentru fiecare serviciu au fost generate un numar de teste egal sau mai mare cu num'arul de metode pe care le are serviciul, in fiecarea test au fost definite seturi tabelare de date pentru a acoperi cât mai multe cazuri. Testele au structura similar'a cu cel reprezentat 'in figura \ref{test_example}.
+Pentru fiecare serviciu au fost generate un numar de teste egal sau mai mare cu num'arul de metode pe care le are serviciul, in fiecarea test au fost definite seturi tabelare de date pentru a acoperi cât mai multe cazuri. 'In sec'tiunea de mai jos este prezentat un exemplu de test pentru ini'tierea unui obiect. 
 
-\begin{figure}[H]
-\begin{center}
-\advance\leftskip-3cm
-\advance\rightskip-3cm
-\includegraphics[keepaspectratio=true,scale=0.28]{img/tabel_test.png}
-\caption{Exemplu Test}
-\label{test_example}
-\end{center}
-\end{figure}
+%% modify image to white one
 
-Rata de acoperire a codului a fost m'asurat'a cu ajutorul unui \textit{tool} care este integrat 'in limbaj, aceasta se nume'ste \textbf{GoCover}. 'In tabelul \ref{table:coverage} este reprezentat'a rata de aceprire cu teste a fiec'arui serviciiu 'in  parte, unele p'ar'ti nu au putut fi acoperite, acestea con'tinând trat'ari de erori care vin din alte libr'arii folosite, o situa'tie de apari'tie a acestora nu a putut fi simulat'a.
+\begin{tcolorbox}\label{test_example}
+\scriptsize{
+\begin{Verbatim}[commandchars=\\\{\}]
+
+\textcolor{blue}{func} \textcolor{deepchampagne}{TestNewServer}(\textcolor{celestialblue}{t} *testing.\textcolor{munsell}{T}) \textcolor{jazzberryjam}{\{}
+	\textcolor{blue}{type} \textcolor{munsell}{args} \textcolor{blue}{struct} \textcolor{jazzberryjam}{\{}
+		\textcolor{celestialblue}{service} *service.\textcolor{munsell}{AuthService}
+	\textcolor{jazzberryjam}{\}}
+	\textcolor{darkelectricblue}{// Definirea cazurilor de test si a parametrilor utilizati si valorile asteptate}
+	\textcolor{celestialblue}{tests} := \textcolor{jazzberryjam}{[]}\textcolor{munsell}{struct} \textcolor{jazzberryjam}{\{}
+		\textcolor{celestialblue}{name} \textcolor{munsell}{string}
+		\textcolor{celestialblue}{args} args
+		\textcolor{celestialblue}{want} *server.\textcolor{munsell}{AuthServer}
+	\textcolor{jazzberryjam}{\}\{}
+		\textcolor{darkelectricblue}{// Primul caz de test cu parametrii nuli}
+		\{
+			name: \textcolor{darkbrown}{"Nil"},
+			args: \textcolor{munsell}{args}\{
+				service: \textcolor{blue}{nil},
+			\},
+			want: \&\textcolor{celestialblue}{server}.\textcolor{munsell}{AuthServer}\{
+				Service: \textcolor{blue}{nil},
+			\},
+		\},
+	        \textcolor{darkelectricblue}{// Al doilea caz de test, cu parametri valizi}
+		\{
+			name: \textcolor{darkbrown}{"Not nil"},
+			args: \textcolor{munsell}{args}\{
+				service: service.\textcolor{deepchampagne}{NewAuthService}\textcolor{jazzberryjam}{()},
+			\},
+			want: \&\textcolor{celestialblue}{server}.\textcolor{munsell}{AuthServer}\{
+				Service: service.\textcolor{deepchampagne}{NewAuthService}\textcolor{jazzberryjam}{()},
+			\},
+		\},
+	\textcolor{jazzberryjam}{\}}
+	
+	\textcolor{jazzberryjam}{for} \textcolor{celestialblue}{_},\textcolor{celestialblue}{ tt} := \textcolor{jazzberryjam}{range} tests \{
+		\textcolor{darkelectricblue}{// Pentru fiecare caz de test din structura tabelara definita, se ruleaza un nou test, }
+		\textcolor{darkelectricblue}{//in care se apeleaza metoda testata din cadrul pachetului.}
+		t.\textcolor{deepchampagne}{Run}(tt.name, \textcolor{blue}{func}(t *testing.T) \{
+		\textcolor{darkelectricblue}{// Se verifica prin reflectie daca datele obtinute sunt egale cu cele asteptate}
+			\textcolor{jazzberryjam}{if} \textcolor{celestialblue}{got} := server.\textcolor{deepchampagne}{NewServer}(tt.args.\textcolor{celestialblue}{service}); !reflect.\textcolor{deepchampagne}{DeepEqual}(\textcolor{celestialblue}{got}, tt.\textcolor{celestialblue}{want}) \textcolor{jazzberryjam}{\{}
+				t.\textcolor{deepchampagne}{Errorf}(\textcolor{darkbrown}{"NewServer() = \%v, want \%v"}, \textcolor{celestialblue}{got}, tt.\textcolor{celestialblue}{want})
+			\textcolor{jazzberryjam}{\}}
+		\})
+	\}
+\textcolor{jazzberryjam}{\}}
+\end{Verbatim}
+}
+\end{tcolorbox}
+%% modify image to white one
+
+Rata de acoperire a codului a fost m'asurat'a cu ajutorul unui \textit{tool} care este integrat 'in limbaj, aceasta se nume'ste \textit{Go Cover}. 'In tabelul \ref{table:coverage} este reprezentat'a rata de aceprire cu teste a fiec'arui serviciiu 'in  parte, unele p'ar'ti nu au putut fi acoperite, acestea con'tinând trat'ari de erori care vin din alte libr'arii folosite, o situa'tie de apari'tie a acestora nu a putut fi simulat'a.
 
 \begin{table}[H]
+\small{
 \caption{Rata de acoperire a testelor}
 \begin{tabular}{|c|c|c|c|}          
 \hline                     
-Nume serviciu & Acoperire server(\%) & Acoperire service (\%) & Acoperire altele(\%)   \\ [0.5ex]   
+Nume serviciu & Acoperire API & Acoperire BLL  & Acoperire alte pachete  \\ [0.5ex]   
 \hline
-                              
+Serviciu autentificare & 84\% & 81\% & 86\% \\
+\hline
+Serviciu compresie& 96\%& 95\% & 90\% \\
+\hline
+Serviciu criptare & 81\% & 90\% & 97\% \\
+\hline
+Serviciu fi'siere &90\% & 80\% & 99\% \\
+\hline
+Serviciu staganografie & 81\% & \textcolor{orange}{77\%} & 86\% \\
+\hline         
+Serviciu utilizatori & 85\% & 83\% & \textcolor{red}{60\%} \\
+\hline
+                    
 \end{tabular}
   % titlul tabelului
-\label{table:coverage}             
+\label{table:coverage}   
+}          
 \end{table}
-
+Pentru fiecare metod'a 'si func'tionalitate a serverului au fost generate toate combina'tiile posibile de date, valide 'si invalide, pentru a detecta cât mai multe probleme 'si a le fixa, sau pentru a avea siguran'ta c'a totul func'tioneaz'a cum este de a'steptat.
 
 Testarea adecvat'a a avut un rol semnificativ 'in procesul de detec'tie de erori sau comportament nea'steptat. Datorit'a test'arii au fost detectate probleme triviale de securitate, care puteau compromite identitatea 'si datele utilizatorului.
 
 
 \section{Testarea clientului}
-postman si testtare manuala fe
-\chapter{Manual de Instalare 'si Utilizare}
+Pentru testarea aplica'tiei client s-au efectuat 3 tipuri de teste: teste manuale, e2e 'si Unit teste. 
 
-\section{Cerin'te preliminare}
+Cu ajutorul Unit testelor s-a testat func'tionarea corect'a a modulelor aplica'tiei 'si a logicii de prelucrare a datelor. Pentru fiecare func'tionalitate au fost scrise teste care ar trebui s'aurmeze calea de succes 'si teste care con'tin date eronate 'si ar trebui s'a produc'a eroare, f'ar'a a modifica starea aplica'tiei, 'si f'ar'a a cauza erori 'in func'tionare.
+
+Pentru partea de teste e2e a aplica'tiei client s-a folosit frmework-ul \textit{Nightwath}, acesta este un \textit{framework} scris 'in \textit{Node.js} 'si este o solu'tie performant'a pentru testarea aplica'tiilor web. \textit{Nightwatch} este potrivit pentru proiectele care adopt'a calea livr'arii continue. Cu ajutorul acestui framework  am testat interac'tiunea clientului cu serverul 'si c'a toate ac'tiunile 'si ttoate datele se propag'a corect 'intre module 'si servicii.
+
+Prin testare manual'a s-a testat modul de interac'tiune a aplica'tiei cu utilizatorul. Acest lucru s-a efectuat prin parcurgerea c'ailor de evenimente posibile, erorile s-au difunc'tiunile detectate devenind noi sarcini de 'indeplinit 'in procesul de dezvoltare a proiectlui.
+
+\chapter{Manual de Instalare 'si Utilizare}
+'In acest capitol sunt prezentate cerin'tele 'si pa'sii de configurare a aplica'tie din perspectiva unui dezvoltator software 'si pa'sii de utilizare din perspectiva unui client al sistemului.
+\section{Cerin'te sistem}
+Pentru a ob'tine un mediu optim pentru rularea aplica'tiei, calculatorul dezvoltatorului software trebuie s'a 'indeplineasc'a urm'atoarele cerin'te:
+\begin{itemize}
+\item \textbf{CPU}: Intel Core i5 sau mai mult
+\item  \textbf{Frecven't'a}: 1.8 GHz
+\item  \textbf{RAM} : 8 GB
+\item  \textbf{Sistem de operare}: Linux sau OS X
+\item  \textbf{SSD/HDD}:256 GB
+\item  \textbf{Browser}: Google Chrome, Safari sau Mozilla Firefox
+\end{itemize}
+Pentru clientul aplica'tiei web, cerin'tele se limiteaz'a la cerin'tele browser-ului 'si cele de RAM.
 \section{Instalare si configurare}
+Atât aplica'tie client, cât 'si cea server sunt hostate pe GitHub, acestea se afl'a 'in reposiitory separate. Toate sub-proiectele necesare se g'asesc reunite 'in aceea'si organiza'tie. Primul pas const'a 'in clonarea fiec'arui proiect pe ma'sina local'a, ficare subproiect con'tine un fi'sier 'in care sunt descrise cerin'tele ce configurare. 'In primul rând se vor configura microserviciile pentru back-end, iar apoi se va configura aplica'tia client. 
+
+'In continuare vor fi descri'si etapele de configurare ale ambelor p'ar'ti ale proiectului.
+\begin{enumerate}[label=Pasul \arabic*]
+\item{\textbf{Ob'tinerea unei copii locale a proiectelor}
+\begin{itemize}
+\item{Se va desc'arca 'si instala GIT\footnote{https://git-scm.com/}}
+\item{Se va accesa \textbf{bitstored}, toate repository sunt publice 'si disponibile 'in organiza'tia respectiv'a}
+\item{Se vor clona toate proiectele listate 'in organiza'tie 'intr-un director local. Pentru clonare se pot utila clien'ti de Git sau se poate rula comanda \textbf{git clone \$REPO\_URL} pentru fiecare subproiect}
+\end{itemize}
+}
+\item{\textbf{Instalarea 'si configurarea bazelor de date}\label{instal_db}
+\begin{itemize}
+\item{ Se va instala 'si configura \textbf{Couchbase}\footnote{https://couchbase.com}, conform pa'silor din tutorialul de la adresa urm'atoare \textit{https://docs.couchbase.com/server/4.1/getting-started/installing.html}}
+\item{ Se va crea un nou cluster, folosind scriptul din fi'sierul \\ \textit{server/repository/scripts/create\_cluster.sh}}
+\item{ Serverul de baz'a de date va fi accesibil la adresa \textit{localhost:8091}, din interfa'ta de administrator se pot gestiona datele, se pot crea noi clustere 'si se pot vedea metrici.}
+\item {Pentru a putea utiliza Couchbase ORM din limbajul Golang, se va instala urm'atoarea libr'arie
+\begin{tcolorbox}\label{run_couch}
+    \scriptsize{
+    \begin{Verbatim}[commandchars=\\\{\}]
+	> go get -v github.com/couchbase/gocb
+    \end{Verbatim}
+    }
+    \end{tcolorbox} }
+\item{ Se va instala 'si configura \textbf{MongoDB v4.x}\footnote{https://mongodb.com}, pentru instalare se vor urm'ari pa'sii de la adresa \textit{https://docs.mongodb.com/manual/installation/}}
+\item{Op'tional se va instala Robo3T\footnote{https://robomongo.org/}, acest IDE permite vizualizarea, monitorizarea 'si editarea 'inregistr'arilor din baza de date Mongo}
+\item{Se va porni severul de MongoDB utilizând comenzile:
+\begin{tcolorbox}\label{run_mongo}
+    \scriptsize{
+    \begin{Verbatim}[commandchars=\\\{\}]
+	> docker run --rm -it -p 27017:27017 mongo \\
+	\# sau pentru rularea pe masina fizica\\
+	> mongod
+    \end{Verbatim}
+    }
+    \end{tcolorbox} 
+}
+\item{O instan't'a de MongoDB va fi accesibil'a la adresa \textit{localhost:27017}}
+\item{Pentru a fi accesibil'a din Golang, se va instala un pachet MongoORM + Driver pentru Go, se va utiliza comanda ce urmeaz'a 
+\begin{tcolorbox}\label{get_mongo}
+    \scriptsize{
+    \begin{Verbatim}[commandchars=\\\{\}]
+	> go get -v go.mongodb.org/mongo-driver/
+    \end{Verbatim}
+    }
+    \end{tcolorbox} 
+}
+
+\end{itemize}
+
+}
+\item{\textbf{Configurarea 'si rularea aplica'tiei server}
+\begin{itemize}
+\item{Se va instala \textbf{Golang}\footnote{https://golang.org/doc/install}, versiune mai nou'a de 1.12}
+\item{Se va instala  \textbf{Visual Studio Code}\footnote{https://code.visualstudio.com/} 'si se vor ad'auga extensii de Golang, sau se va instala  \textbf{Vim} 'si se va configura pentru suportul libajului Golang, sau se va instala  editorul dedicat\textbf{Goland}\footnote{https://www.jetbrains.com/go/}}
+\item{Se va desc'arca 'si  instala  \textbf{Docker}\footnote{https://docs.docker.com/install/}}
+\item{Se va instala Vue.JS\footnote{https://vuejs.org/}  urmând pa'sii din urm'atorul tutorial \\ \textit{https://vuejs.org/v2/guide/installation.html}}
+
+\item{Se va instala  \textbf{Envoy}\footnote{https://www.envoyproxy.io/docs/envoy/latest/install/install}}
+\item{Se va instala compilatorul de fi'siere proto numit \textbf{protoc}\footnote{http://google.github.io/proto-lens/installing-protoc.html}}
+\item{ 'Inainte de rularea proiectului se vor instala, configura 'si rula  bazele de date necesare, conform descrierii de la \ref{instal_db}}
+\item{ Se va rula containerul de \textit{Envoy}, se va deschide o sesiune de terminal 'in directorul r'ad'a cin'a a proiectuluii 'si se vor rula comenzile:
+\begin{tcolorbox}\label{run_envoy}
+    \scriptsize{
+    \begin{Verbatim}[commandchars=\\\{\}]
+	> cd envoy \\
+	> docker build -t bitstored_envoy \\
+	> docker run --rm -it -p 8081:8081 bitstored_envoy
+    \end{Verbatim}
+    }
+    \end{tcolorbox} }
+\item{Se va rula fiecare serviciu utilizând comenzile de mai jos:
+\begin{tcolorbox}\label{run_services}
+    \scriptsize{
+    \begin{Verbatim}[commandchars=\\\{\}]
+	> cd \$SERVICE_NAME \\
+	> docker build -t \$SERVICE_NAME \\
+	> docker run  --network=host  \$SERVICE_NAME
+    \end{Verbatim}
+    }
+    \end{tcolorbox} 
+  O alternativ'a pentru acest proces este rularea containerului de docker din r'ad'acina proiectului, utilizând comenzile:
+  \begin{tcolorbox}\label{run_server}
+    \scriptsize{
+    \begin{Verbatim}[commandchars=\\\{\}]
+	> docker build -t server \\
+	> docker run  server
+    \end{Verbatim}
+    }
+    \end{tcolorbox} 
+}
+\end{itemize}
+}
+
+\item{\textbf{Configurarea 'si rularea aplica'tiei client}
+\begin{itemize}
+\item{Se va deschide o sesiune nou'a de terminal 'si se va naviga 'in directorul aplica'tiei client}
+\item{Se va rula aplica'tia, utilizând comenzile:
+\begin{tcolorbox}\label{run_client}
+    \scriptsize{
+    \begin{Verbatim}[commandchars=\\\{\}]
+	> npm install \\
+	> npm run \\
+    \end{Verbatim}
+    }
+    \end{tcolorbox} 
+}
+\item{Aplica'tia Web va fi disponibil'a local la adresa \textit{localhost:8080}   } 
+\end{itemize}
+}
+\end{enumerate}
+\section{Instruc'tiuni de utilizare}
+'In aceast'a sec'tiune se va face o prezentare general'a a aplica'tiei, se va prezenta con'tinutul web al fiec'arei pagini care poate fi accesat'a de utilizatori, 'in func'ti de rol: utilizator ne'ingregistrat, utilizator autentificat sau administrator. Va fi prezentat arborele de naviigare a aplica'tiei, cu scopul de a ob'tine o viziune asupra cazurilor de utilizare.
+
+\subsection{Arborele de navigare}
+'In Figura \ref{sitemap} modul 'in care paginile aplica'tiei sunt conectate 'intre ele 'si ce tip de utilizatori care le pot accesa. 
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.42]{img/sitemap.png}
+\caption{Arborele de navigare al aplica'tiei}
+\label{sitemap}
+\end{center}
+\end{figure} 
+Aceast'a schem'a a fost utilizat'a 'in etapa de design, oferind informa'tii generale despre modul de contruire a interfe'tei utilizator. 
+Dup'a cum se poate observa, num'arul de pagini publice se rezum'a la login 'si register. Pentru a accesa oricare alt'a pagin'a, utilizatorul va trebui s'a se autentifice.
+\section{Navigare}
+Primul  pas pentru utilizarea aplica'tiei este crearea unui cont. De la pagina de start, se va ap'asa butonul register, conform Figurii \ref{register_button}.
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.40]{img/register_button.png}
+\caption{Buttonul de Register}
+\label{register_ button}
+\end{center}
+\end{figure} 
+Dup'a ap'asarea butonuluii se va deschide o nou'a pagin'a cu un formular, fiecare câmp este obligatoriu. 
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.35]{img/bit_register.png}
+\caption{Exemplu 'inregistrare}
+\label{bit_register}
+\end{center}
+\end{figure} 
+Condi'tia principal'a pentru ca o 'inregistrare s'a fie posibil'a este ca email-ul, numele de utilizator 'si num'arul de telefon s'a nu fie 'inregistrate deja 'in sistem.
+'In Figura \ref{bit_register} este prezentat un exemplu de date valide.
+
+Dup'a ce utilizatorul este autentificat, acesta poate alege din meniul aplica'tiei spre ce pagin'a dore'ste s'a navigheze. Pentru a efectua oper'a'tii cu fi'siere se va naviga la pagin \textit{My Drive}. 'In Figura \ref{bit_drive} este reprezentat'a pagina principal'a a Drive-ului.
+
+\begin{figure}[H]
+\begin{center}
+\advance\leftskip-3cm
+\advance\rightskip-3cm
+\includegraphics[keepaspectratio=true,scale=0.5]{img/bit_drive.png}
+\caption{Vizualizare drive}
+\label{bit_drive}
+\end{center}
+\end{figure} 
+Din pagina de mai sus utilizatorul poate selecta opera'tia pe care dore'ste s'a o efectueze: 'inc'arcare fi'sier, creare fi'sier sau creare director nou. De asemenea poate naviga 'in alte directoarte printr-un click pe directorul dorit. Interfa'ta este pe cât se poate de sugestiv'a, cu explica'tii pentru datele ce trebuie completate, iar navigarea 'in drive este similar'a cu navigarea 'in sistemul de fi'siere al calculatorului.
 
 \chapter{Concluzii}
+'In acest capitol vor fi descrise rezultatele ob'tinute, contribu'tiile aduse 'si deasemenea ideile de dezvoltare ulterioar'a 'si 'imbun'at'a'tire a aplica'tiei.
+\section{Rezultate ob'tinute}
+Scopul proiectului a fost dezvoltarea unei aplica'tii securizate de stocare a datelor. Cerin'tele de baz'a au fost 'indeplinite, aplica'tia având func'tionalit'a'tile cheie ale unui sistem de stocare de fi'siere clasic.
+
+Comparativ cu sistemele analizate 'in Sec'tiunea \ref{sisteme_similare} are un set de func'tionalit'a'ti mai pu'tin numeros, dar implementarea acestora este bazat'a pe ideea men'tinerii unui nivel 'inalt de securitate a datelor. 
+Sistemul permite compresia eficient'a a datelor, pre'tul de stocare sc'azând astfel de 4-5 ori 'in compara'tie cu sistemele analizate 'in Sec'tiunea  \ref{sisteme_similare}. 
 
 
-\section{Contribu'tii 'si rezultate ob'tinute}
+
+\section{Contribu'tii}
 Aplica'tia ob'tinut'a ofer'a func'tionalit'a'ti de 'inc'arcare 'si desc'arcare  a fi'sierelor, acesta fiind un sistem cu zero cuno'tin'te despre datele stocate 'in sistem, un atacator nu poate s'a pun'a mâna pe datele utilizatorului 'in lipsa parolei de decriptare, aceasta nefiind stocat'a 'in sistem.
 
-Prin ad'augarea compresiei fi'sierelor text 'si a imaginilor, implementate de mine,  am obtinut reducerea coinsiderabil'a a spa'tiului de stocare 'in cazul fi'sierelor mari. De asemnea ad'augarea compresiei a contribuit la cre'sterea securit'a'tii aplica'tiei prin cre'stere nivelului de complexitate pentru decriptare. 
-
+Prin ad'augarea compresiei fi'sierelor text 'si a imaginilor  s-a  obtinut reducerea considerabil'a a spa'tiului de stocare 'in cazul fi'sierelor mari. De asemnea ad'augarea compresiei a contribuit la cre'sterea securit'a'tii aplica'tiei prin cre'stere nivelului de complexitate pentru decriptare. 
 
 \section{Dezvolt'ari ulterioare}
+Proiectul are func'tionalit'a'tile minime care 'il calific'a 'in rândul aplica'tiilor de stocare a fi'sierelor. Penttru 'imbun'at'a'tirea modului de func'tionare se pot implementa urm'atoarele idei:
 
-Opera'tiile de criptare 'si compresie sunt foarte costisitoare 'in cazul unor date mari ca volum 'si cu rat'a de repetare mic'a, o solu'tie care ar eficientiza procesul ar fi combinarea celor 2 opera'tii 'in una singur'a. Acest efect se poate ob'tine prin ad'augarea unor permuta'tii pseudoaleatore 'in procesul de compresie al datelor\cite{comp_crypto}.
+\begin{itemize}
 
-Se pot eficientiza func'tionalit'a'tile de 'inc'arcare 'si desc'arcare a datelor prin ad'augarea opera'tiei de desp'ar'tire 'in blocuri, acestea fiind transmise alternativ, opera'tiile de transfer prin re'tea sunt cunoscute a fi cele mai 'incete opera'tii de manipulare a datelor. O astfel de abordare ar putea reduce extrem de mult opera'tiile de transmisie, dar 'si cele de criptare 'si compresie, datorit'a faptului c'a opera'tiile pe blocuri ar putea fi efectuate 'in paralel, 'in loc de serial.
+\item[•] Deoarece opera'tiile de criptare 'si compresie, precum 'si opera'tiile inverse, sunt foarte costisitoare 'in cazul unor date mari ca volum 'si cu rat'a de repetare mic'a, o solu'tie care ar eficientiza procesul ar fi combinarea celor 2 opera'tii 'in una singur'a. Acest efect se poate ob'tine prin ad'augarea unor permuta'tii pseudoaleatore 'in procesul de compresie al datelor\cite{comp_crypto}.
+
+\item[•] Se pot eficientiza func'tionalit'a'tile de 'inc'arcare 'si desc'arcare a datelor prin ad'augarea opera'tiei de desp'ar'tire 'in blocuri, acestea fiind transmise alternativ, opera'tiile de transfer prin re'tea sunt cunoscute a fi cele mai 'incete opera'tii de manipulare a datelor. O astfel de abordare ar putea reduce extrem de mult opera'tiile de transmisie, dar 'si cele de criptare 'si compresie, datorit'a faptului c'a opera'tiile pe blocuri ar putea fi efectuate 'in paralel, 'in loc de serial.
+
+\item[•] Deoarece o parte dintre aplica'tiile existente sunt vulnerabile la execu'tie de cod mali'tios sau coruperi de date, o func'tionalitate care ar putea cre'ste nivelul de securitate a aplica'tiei ar fi ad'augarea func'tionalit'a'tii de antivirus. Astfel  fiecare 'inc'arcare de fi'sier ar fi validat'a 'in prealabil 'si fi'sierul ar ajunge 'in spa'tiul de stocare doar dup'a ce ar fi marcat ca unul sigur.
+
+\item[•] Dat fiind faptul c'a mul'ti hackeri utilizeaz'a atacurile prin for't'a brut'a, aplica'tia poate fi expus'a la acest tip de atacuri, o solu'tie pentru acest pericol ar fi ad'augarea autentific'arii 'in 2 pa'si.
+
+\item[•] O func'tionalitate de care poate beneficia aplica'tia este monitorizarea activit'a'tii atilizatorilor 'si analiza acesteia printr-un algoritm de inteligen't'a artificial'a, astfel se pot nbloca automat utilizatorii care au activitt'a'ti suspicioase sau se pot prezice viitoarele ac'tiuni sau procesul de cre'stere a volumului de date.
+\end{itemize}
+
 
 
 %\addcontentsline {toc}{chapter}{Bibliography} 
@@ -1499,6 +1975,7 @@ Se pot eficientiza func'tionalit'a'tile de 'inc'arcare 'si desc'arcare a datelor
 \bibliography{thesis}%same file name as for .bib
 
 \include{apendix}
+
 
 
 \end{document}

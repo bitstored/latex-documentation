@@ -1,0 +1,73 @@
+\BOOKMARK [0][-]{chapter.1}{Capitolul Introducere - Contextul proiectului}{}% 1
+\BOOKMARK [0][-]{chapter.2}{Capitolul Obiectivele Proiectului}{}% 2
+\BOOKMARK [1][-]{section.2.1}{Formularea temei}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.2}{Obiectivele proiectului}{chapter.2}% 4
+\BOOKMARK [1][-]{section.2.3}{Cerinte}{chapter.2}% 5
+\BOOKMARK [2][-]{subsection.2.3.1}{Cerinte functionale}{section.2.3}% 6
+\BOOKMARK [2][-]{subsection.2.3.2}{Cerinte non-functionale}{section.2.3}% 7
+\BOOKMARK [0][-]{chapter.3}{Capitolul Studiu Bibliografic}{}% 8
+\BOOKMARK [1][-]{section.3.1}{Caracteristicile arhitecturii monolitice}{chapter.3}% 9
+\BOOKMARK [1][-]{section.3.2}{Caracteristicile arhitecturii orientate pe microservicii}{chapter.3}% 10
+\BOOKMARK [1][-]{section.3.3}{Microservicii \356n Cloud}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.4}{Securitatea in sistemele informatice}{chapter.3}% 12
+\BOOKMARK [2][-]{subsection.3.4.1}{Amenintari}{section.3.4}% 13
+\BOOKMARK [2][-]{subsection.3.4.2}{Criptografia}{section.3.4}% 14
+\BOOKMARK [2][-]{subsection.3.4.3}{Compresia}{section.3.4}% 15
+\BOOKMARK [2][-]{subsection.3.4.4}{Steganografia}{section.3.4}% 16
+\BOOKMARK [1][-]{section.3.5}{Sisteme similare}{chapter.3}% 17
+\BOOKMARK [2][-]{subsection.3.5.1}{Metodologia de analiza}{section.3.5}% 18
+\BOOKMARK [2][-]{subsection.3.5.2}{CloudMe}{section.3.5}% 19
+\BOOKMARK [2][-]{subsection.3.5.3}{Dropbox}{section.3.5}% 20
+\BOOKMARK [2][-]{subsection.3.5.4}{CrashPlan}{section.3.5}% 21
+\BOOKMARK [2][-]{subsection.3.5.5}{ICloud}{section.3.5}% 22
+\BOOKMARK [2][-]{subsection.3.5.6}{Google Drive}{section.3.5}% 23
+\BOOKMARK [2][-]{subsection.3.5.7}{OneDrive}{section.3.5}% 24
+\BOOKMARK [2][-]{subsection.3.5.8}{pCloud}{section.3.5}% 25
+\BOOKMARK [2][-]{subsection.3.5.9}{sync.com}{section.3.5}% 26
+\BOOKMARK [2][-]{subsection.3.5.10}{Concluzii si plasarea sistemului}{section.3.5}% 27
+\BOOKMARK [0][-]{chapter.4}{Capitolul Analiza si Fundamentare Teoretica}{}% 28
+\BOOKMARK [1][-]{section.4.1}{Arhitectura conceptuala a sistemului}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.2}{Cazuri de utilizare}{chapter.4}% 30
+\BOOKMARK [2][-]{subsection.4.2.1}{Modele de cazuri de utilizare}{section.4.2}% 31
+\BOOKMARK [1][-]{section.4.3}{Tehnologii}{chapter.4}% 32
+\BOOKMARK [2][-]{subsection.4.3.1}{Golang}{section.4.3}% 33
+\BOOKMARK [2][-]{subsection.4.3.2}{gRPC}{section.4.3}% 34
+\BOOKMARK [2][-]{subsection.4.3.3}{Vue.JS}{section.4.3}% 35
+\BOOKMARK [2][-]{subsection.4.3.4}{MongoDB}{section.4.3}% 36
+\BOOKMARK [2][-]{subsection.4.3.5}{Couchbase}{section.4.3}% 37
+\BOOKMARK [2][-]{subsection.4.3.6}{HTML, CSS, Bootstrap}{section.4.3}% 38
+\BOOKMARK [2][-]{subsection.4.3.7}{JSON Web Token\(JWT\)}{section.4.3}% 39
+\BOOKMARK [2][-]{subsection.4.3.8}{Docker si Kubernetes}{section.4.3}% 40
+\BOOKMARK [2][-]{subsection.4.3.9}{Google Cloud}{section.4.3}% 41
+\BOOKMARK [2][-]{subsection.4.3.10}{Git}{section.4.3}% 42
+\BOOKMARK [0][-]{chapter.5}{Capitolul Proiectare de Detaliu si Implementare}{}% 43
+\BOOKMARK [1][-]{section.5.1}{Arhitectura serverului}{chapter.5}% 44
+\BOOKMARK [2][-]{subsection.5.1.1}{Descriere generala}{section.5.1}% 45
+\BOOKMARK [2][-]{subsection.5.1.2}{Orchestrarea microserviciilor}{section.5.1}% 46
+\BOOKMARK [2][-]{subsection.5.1.3}{Microserviciul de autentificare}{section.5.1}% 47
+\BOOKMARK [2][-]{subsection.5.1.4}{Microserviciul de criptare}{section.5.1}% 48
+\BOOKMARK [2][-]{subsection.5.1.5}{Microserviciul de steganografie si marcare}{section.5.1}% 49
+\BOOKMARK [2][-]{subsection.5.1.6}{Microserviciul de compresie}{section.5.1}% 50
+\BOOKMARK [2][-]{subsection.5.1.7}{Microserviciul de fisiere}{section.5.1}% 51
+\BOOKMARK [2][-]{subsection.5.1.8}{Microserviciul de utilizatori}{section.5.1}% 52
+\BOOKMARK [1][-]{section.5.2}{Arhitectura aplicatiei web}{chapter.5}% 53
+\BOOKMARK [2][-]{subsection.5.2.1}{Descriere generala}{section.5.2}% 54
+\BOOKMARK [2][-]{subsection.5.2.2}{Descrierea componentelor}{section.5.2}% 55
+\BOOKMARK [0][-]{chapter.6}{Capitolul Testare si Validare}{}% 56
+\BOOKMARK [1][-]{section.6.1}{Testarea serverului}{chapter.6}% 57
+\BOOKMARK [2][-]{subsection.6.1.1}{Reguli de testare \356n Golang}{section.6.1}% 58
+\BOOKMARK [2][-]{subsection.6.1.2}{Testarea serviciilor}{section.6.1}% 59
+\BOOKMARK [1][-]{section.6.2}{Testarea clientului}{chapter.6}% 60
+\BOOKMARK [0][-]{chapter.7}{Capitolul Manual de Instalare si Utilizare}{}% 61
+\BOOKMARK [1][-]{section.7.1}{Cerinte sistem}{chapter.7}% 62
+\BOOKMARK [1][-]{section.7.2}{Instalare si configurare}{chapter.7}% 63
+\BOOKMARK [0][-]{chapter.8}{Capitolul Concluzii}{}% 64
+\BOOKMARK [1][-]{section.8.1}{Rezultate obtinute}{chapter.8}% 65
+\BOOKMARK [1][-]{section.8.2}{Contributii}{chapter.8}% 66
+\BOOKMARK [1][-]{section.8.3}{Dezvoltari ulterioare}{chapter.8}% 67
+\BOOKMARK [0][-]{chapter*.2}{Bibliografie}{}% 68
+\BOOKMARK [0][-]{appendix.A}{Anexa Sectiuni relevante din cod}{}% 69
+\BOOKMARK [0][-]{appendix*.4}{Lista figurilor}{}% 70
+\BOOKMARK [0][-]{appendix*.5}{Lista tabelelor}{}% 71
+\BOOKMARK [0][-]{appendix.B}{Anexa Diagrame UML}{}% 72
+\BOOKMARK [0][-]{appendix.C}{Anexa Glosar}{}% 73

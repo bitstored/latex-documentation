@@ -26,11 +26,32 @@ D.~Reinsel, J.~Gantz, and J.~Rydning, ``The digitization of the word from edge
   to core,'' \emph{IDC White Papper}, vol.~20, no.~18, pp. 1--27, 2018.
 
 \bibitem{cloudsecurityautomation}
-P.~Priyam, \emph{Cloud Security Automation}, 2018.
+P.~Priyam, \emph{Cloud Security Automation}.\hskip 1em plus 0.5em minus
+  0.4em\relax OReilly Media, Inc., 2018.
+
+\bibitem{data_compression_ibm}
+P.~Bruni, M.~K. Boisen, G.~D. Marchi, and F.~Pinto, \emph{Reduce Storage
+  Occupancy and Increase Operations Efficiency with IBM zEnterprise Data
+  Compression}.\hskip 1em plus 0.5em minus 0.4em\relax IBM, 2015.
+
+\bibitem{compression_adv}
+\BIBentryALTinterwordspacing
+P.~Lancett, ``The advantages of file compression.'' [Online]. Available:
+  \url{https://www.techwalla.com/articles/the-advantages-of-file-compression}
+\BIBentrySTDinterwordspacing
+
+\bibitem{solid}
+\BIBentryALTinterwordspacing
+``Solid principles.'' [Online]. Available: \url{https://deviq.com/solid/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{go_book_microservices}
+N.~Jackson, \emph{Building Microservices with Go}.\hskip 1em plus 0.5em minus
+  0.4em\relax PacktPub, 2017, vol.~1.
 
 \bibitem{microservice_companies}
 \BIBentryALTinterwordspacing
-``An overview of monolithic vs microservices architecture (msa).'' [Online].
+``An overview of monolithic vs microservices architecture.'' [Online].
   Available: \url{https://www.bmc.com/blogs/microservices-architecture/}
 \BIBentrySTDinterwordspacing
 
@@ -44,6 +65,19 @@ C.~Richardson, ``Pattern: Microservice architecture.'' [Online]. Available:
 J.~Lewis and M.~Fowler, ``Microservices,'' \emph{ThoughtWorks}, vol.~1, no.~1,
   pp. 1--20, 2014.
 
+\bibitem{two_fish_papper}
+B.~Schneier, J.~Kelsey, D.~W. andDavid Wagner, C.~Hall, and N.~Ferguson,
+  ``Twofish: A 128-bit block cipher,'' \emph{Counterpane Systems}, vol.~1,
+  no.~1, pp. 1--68, 1998.
+
+\bibitem{understanding_compression}
+A.~Haecky and C.~McAnlis, \emph{Understanding Compression}.\hskip 1em plus
+  0.5em minus 0.4em\relax OReilly Media, Inc., 2016.
+
+\bibitem{crypto_stegano}
+C.-N. Yang and S.~Cimato, \emph{Visual Cryptography and Secret Image
+  Sharing}.\hskip 1em plus 0.5em minus 0.4em\relax CRC Press, 2017, vol.~1.
+
 \bibitem{topcloud}
 \BIBentryALTinterwordspacing
 ``Best cloud storage.'' [Online]. Available:
@@ -52,7 +86,8 @@ J.~Lewis and M.~Fowler, ``Microservices,'' \emph{ThoughtWorks}, vol.~1, no.~1,
 
 \bibitem{cloudstoragecomparison}
 M.~Borgmann, T.~Hahn, M.~Herfert, T.~Kunz, M.~Richter, U.~Viebeg, and S.~Vowe,
-  \emph{On the Security of Cloud Storage Services}, 2012.
+  \emph{On the Security of Cloud Storage Services}.\hskip 1em plus 0.5em minus
+  0.4em\relax Fraunhofer Institute for Secure Information Technology SIT, 2012.
 
 \bibitem{cloudme_com}
 \BIBentryALTinterwordspacing
@@ -76,5 +111,19 @@ M.~Borgmann, T.~Hahn, M.~Herfert, T.~Kunz, M.~Richter, U.~Viebeg, and S.~Vowe,
 ``Icloud drive review.'' [Online]. Available:
   \url{https://www.cloudwards.net/review/icloud-drive/}
 \BIBentrySTDinterwordspacing
+
+\bibitem{top_secure}
+\BIBentryALTinterwordspacing
+``Most secure cloud storage 2019: Safety first.'' [Online]. Available:
+  \url{https://www.cloudwards.net/most-secure-cloud-storage/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{learning_couchbase}
+H.~Potsangbam, \emph{Learning Couchbase}.\hskip 1em plus 0.5em minus
+  0.4em\relax PacktPub, 2015, vol.~1.
+
+\bibitem{comp_crypto}
+C.-E. Wang, ``Cryptography in data compression,'' \emph{CodeBreakers Journal},
+  vol.~2, no.~3, pp. 1--20, 2005.
 
 \end{thebibliography}

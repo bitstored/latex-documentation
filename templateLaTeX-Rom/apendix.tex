@@ -1,9 +1,83 @@
+\definecolor{darkbrown}{rgb}{0.59, 0.29, 0.0}
+\definecolor{celestialblue}{rgb}{0.29, 0.59, 0.82}
+\definecolor{deepchampagne}{rgb}{0.98, 0.84, 0.65}
+\definecolor{munsell}{rgb}{0.0, 0.66, 0.47}
+
 \appendix
-\chapter{Sec'tiuni relevante din cod}
+\chapter{Sec'tiuni relevante din cod}\label{sectiuni_cod}
 
-\begin{verbatim}
+\subsubsection{Exemplu de fi'sier \textit{protobuf}}
+\begin{tcolorbox}\label{proto_definition}
+\scriptsize{
+\begin{Verbatim}[commandchars=\\\{\}]
 
-\end{verbatim}
+\textcolor{blue}{syntax} = \textcolor{darkbrown}{"proto3"};
+
+\textcolor{blue}{package} \textcolor{darkbrown}{compression_service};
+\textcolor{blue}{option} go_package=\textcolor{darkbrown}{"pb"};
+
+\textcolor{blue}{import} \textcolor{darkbrown}{"google/api/annotations.proto"};
+
+\textcolor{blue}{service} \textcolor{munsell}{Compression} \{
+    \textcolor{blue}{rpc} \textcolor{deepchampagne}{CompressImage}(\textcolor{munsell}{CompressImageRequest})
+                              \textcolor{blue}{returns} (\textcolor{munsell}{CompressImageResponse}) \{
+         \textcolor{blue}{option} (google.api.http) = \{
+             \textcolor{celestialblue}{get}: \textcolor{darkbrown}{"/compression/api/v1/image/compress"}
+        \};
+    \}
+     \textcolor{blue}{rpc} \textcolor{deepchampagne}{DecompressImage}(\textcolor{munsell}{DecompressImageRequest})
+                             \textcolor{blue}{returns} (\textcolor{munsell}{DecompressImageResponse}) \{
+         \textcolor{blue}{option} (google.api.http) = \{
+            \textcolor{celestialblue}{get}: \textcolor{darkbrown}{"/compression/api/v1/image/decompress"}
+       \};
+    \}
+     \textcolor{blue}{rpc} \textcolor{deepchampagne}{CompressText}(\textcolor{munsell}{CompressTextRequest})
+                              \textcolor{blue}{returns} (\textcolor{munsell}{CompressTextResponse}) \{
+         \textcolor{blue}{option} (google.api.http) = \{
+             \textcolor{celestialblue}{get}: \textcolor{darkbrown}{"/compression/api/v1/text/compress"}
+        \};
+    \}
+     \textcolor{blue}{rpc} \textcolor{deepchampagne}{DecompressText}(\textcolor{munsell}{DecompressTextRequest}) 
+                            \textcolor{blue}{returns} (\textcolor{munsell}{DecompressTextResponse}) \{
+         \textcolor{blue}{option} (google.api.http) = \{
+             \textcolor{celestialblue}{get}: \textcolor{darkbrown}{"/compression/api/v1/text/decompress"}
+        \};
+    \}
+\}
+
+\textcolor{blue}{enum} \textcolor{munsell}{ImageType} \{
+	PNG  = 0;
+	JPEG = 1;
+\}
+\textcolor{blue}{message} \textcolor{munsell}{CompressImageRequest} \{
+    \textcolor{blue}{bytes} \textcolor{celestialblue}{image} = 1;
+\}
+\textcolor{blue}{message}\textcolor{munsell}{CompressImageResponse} \{
+    \textcolor{blue}{bytes} \textcolor{celestialblue}{image} = 1;
+\}
+\textcolor{blue}{message} \textcolor{munsell}{DecompressImageRequest} \{
+    \textcolor{blue}{bytes} \textcolor{celestialblue}{image} = 1;
+\}
+\textcolor{blue}{message} \textcolor{munsell}{DecompressImageResponse} \{
+    \textcolor{blue}{bytes} \textcolor{celestialblue}{image} = 1;
+\}
+\textcolor{blue}{message} \textcolor{munsell}{CompressTextRequest} \{
+    \textcolor{blue}{bytes} \textcolor{celestialblue}{text} = 1;
+\}
+\textcolor{blue}{message} \textcolor{munsell}{CompressTextResponse} \{
+    \textcolor{blue}{bytes} \textcolor{celestialblue}{text} = 1;
+\}
+\textcolor{blue}{message} \textcolor{munsell}{DecompressTextRequest} \{
+    \textcolor{blue}{bytes} \textcolor{celestialblue}{text} = 1;
+\}
+\textcolor{blue}{message} \textcolor{munsell}{DecompressTextResponse} \{
+    \textcolor{blue}{bytes} \textcolor{celestialblue}{text} = 1;
+\}
+
+\end{Verbatim}
+}
+\end{tcolorbox}
+
 
 \listoffigures
 
@@ -19,8 +93,19 @@
  \hline
  Termen     & Defini'tie\\
  \hline
- FTS   & Full Text Search   \\
+ HTTPS   & \textit{Hyper Text Transfer Protocol Secure} - este o versiune securizat'a a protocolului de transmisie HTTP.  \\
  \hline
+ gRPC &  \textit{Google Remote Procedure Call} - framework pentru comunicare 'intre servicii, utilizând protocolul HTTP/2. \\
+ \hline
+  e2e &  \\
+  gRPC &  \\
+ HTML &  \\
+ framework  &  \\
+ DOM &  \\
+  RPC &  \\
+  Protocol buffers &  \\
+ \hline
+ 
 \end{tabu}
 \end{table}
 \end{center}

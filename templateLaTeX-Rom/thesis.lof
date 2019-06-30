@@ -1,30 +1,42 @@
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1.1}{\ignorespaces Cre\c {s}terea volumului de date 2010-2025}}{4}
-\contentsline {figure}{\numberline {1.2}{\ignorespaces Triada CIA}}{5}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces Cre\c {s}terea volumului de date 2010-2025}}{1}
+\contentsline {figure}{\numberline {1.2}{\ignorespaces Triada CIA}}{2}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Arhitectura Client-Server}}{7}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Exemplu de steganografie pe imagini}}{8}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Arhitectura Client-Server}}{4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Exemplu de steganografie pe imagini}}{5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Tipurile de utilizatori ale sistemului}}{7}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Arhitectura monolitic\u {a}}}{13}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Arhitectura bazat\u {a} pe microservicii}}{15}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Diferen\c {t}a dintre arhitecturi}}{16}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces CloudMe - interfa\c {t}a web}}{22}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces CloudMe - planuri de pre\c {t}}}{22}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Dropbox - interfa\c {t}a web}}{24}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Arhitectura monolitic\u {a}}}{11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Arhitectura bazat\u {a} pe microservicii}}{13}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Diferen\c {t}a dintre arhitecturi}}{14}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Diferen\c {t}a dintre arhitecturi}}{18}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Exemplu de encodare a unui byte}}{20}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces CloudMe - interfa\c {t}a web}}{22}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces CloudMe - planuri de pre\c {t}}}{23}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Dropbox - interfa\c {t}a web}}{24}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Use cases}}{34}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Golang}}{35}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Arhitectura sistemului}}{34}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Arhitectura clientului}}{35}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Use cases}}{36}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Golang}}{37}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Exemplu de interac\c {t}iune gRPC}}{38}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Arhitectura sistemului}}{38}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Arhitectura serviciului de autentificare}}{39}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Arhitectura serviciului de criptare}}{40}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Arhitectura serviciului de marcaje}}{41}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Arhitectura serviciului de compressie}}{41}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Arhitectura serviciului de fi\c {s}iere}}{45}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Arhitectura serviciului de utilizatori}}{45}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Arhitectura sistemului}}{46}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Diagrama orchestr\u {a}rii \^{\i }n Cloud}}{47}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Arhitectura serviciului de autentificare}}{48}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Diagrama de clase a serviciului de autentificare}}{49}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Arhitectura serviciului de criptare}}{49}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Arhitectura serviciului de marcaje}}{50}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Arhitectura serviciului de compressie}}{51}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Arhitectura serviciului de fi\c {s}iere}}{54}
+\contentsline {figure}{\numberline {5.9}{\ignorespaces Arhitectura serviciului de utilizatori}}{54}
+\contentsline {figure}{\numberline {5.10}{\ignorespaces Arhitectura clientului}}{55}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Exemplu Test}}{47}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Arborele de navigare al aplica\c {t}iei}}{62}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Buttonul de Register}}{63}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces Exemplu \^{\i }nregistrare}}{63}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Vizualizare drive}}{64}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
